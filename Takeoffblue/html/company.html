@@ -1,0 +1,2064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takeoffblue</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/hover-min.css">
+    <link rel="stylesheet" href="../css/morphext.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Additional CSS to handle visibility -->
+    <style>
+        .data-filter-dropdown {
+            display: none;
+        }
+
+        .data-filter-dropdown.show {
+            display: block;
+        }
+</style>
+</head>
+
+<body>
+
+    <!-- <header> -->
+
+        <!-- main header -->
+        <header class="normal-header">
+
+
+            <div class="navbar1 d-flex justify-content-between align-items-center">
+
+                <div class="content d-flex gap-3 align-items-center">
+                    <a class="navbar-brand" href="#">
+                        <img src="../images/logo.jpg" alt="" width="120px">
+                    </a>
+
+                    <ul class="navbar-nav me-auto  mb-lg-0 d-flex flex-row gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calendar.html">calendar</a>
+                        </li>
+                        <li class="nav-item responsive-hidden" >
+                            <a class="nav-link" href="libraries.html" >Libraries </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:#FFBE5E;">Upgrade</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="navbar1-icon d-flex gap-3 align-items-center">
+
+                    <button class="border-0 bg-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="white" d="M21 3v6h-2V6.41l-3.29 3.3l-1.42-1.42L17.59 5H15V3zM3 3v6h2V6.41l3.29 3.3l1.42-1.42L6.41 5H9V3zm18 18v-6h-2v2.59l-3.29-3.29l-1.41 1.41L17.59 19H15v2zM9 21v-2H6.41l3.29-3.29l-1.41-1.42L5 17.59V15H3v6z"/></svg>
+                    </button>
+
+                    <button class="border-0 bg-transparent"></button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 640 512"><path fill="white" d="M58.9 42.1c3-6.1 9.6-9.6 16.3-8.7L320 64l244.8-30.6c6.7-.8 13.3 2.7 16.3 8.7l41.7 83.4c9 17.9-.6 39.6-19.8 45.1l-163.4 46.7c-13.9 4-28.8-1.9-36.2-14.3L320 64l-83.4 139c-7.4 12.4-22.3 18.3-36.2 14.3L37.1 170.6c-19.3-5.5-28.8-27.2-19.8-45.1zM321.1 128l54.9 91.4c14.9 24.8 44.6 36.6 72.5 28.6L576 211.6v167c0 22-15 41.2-36.4 46.6l-204.1 51c-10.2 2.6-20.9 2.6-31 0l-204.1-51C79 419.7 64 400.5 64 378.5v-167L191.6 248c27.8 8 57.6-3.8 72.5-28.6l54.8-91.4z"/></svg>
+                    </button>
+
+                    <button class="border-0 bg-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><g fill="none" stroke="white" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 19v-9a6 6 0 0 1 6-6v0a6 6 0 0 1 6 6v9M6 19h12M6 19H4m14 0h2m-9 3h2"/><circle cx="12" cy="3" r="1"/></g></svg>
+                    </button>
+
+                    <button class="border-0 bg-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="white" d="M16 17v2H2v-2s0-4 7-4s7 4 7 4m-3.5-9.5A3.5 3.5 0 1 0 9 11a3.5 3.5 0 0 0 3.5-3.5m3.44 5.5A5.32 5.32 0 0 1 18 17v2h4v-2s0-3.63-6.06-4M15 4a3.4 3.4 0 0 0-1.93.59a5 5 0 0 1 0 5.82A3.4 3.4 0 0 0 15 11a3.5 3.5 0 0 0 0-7"/></svg>
+                    </button>
+
+                    <button class="border-0 bg-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="-2 -2.5 24 24"><path fill="white" d="M3.656 17.979A1 1 0 0 1 2 17.243V15a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H8.003zm.844-3.093a.54.54 0 0 0 .26-.069l2.355-1.638A1 1 0 0 1 7.686 13H12a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v5c0 .54.429.982 1 1c.41.016.707.083.844.226c.128.134.135.36.156.79c.003.063.003.177 0 .37a.5.5 0 0 0 .5.5m11.5-4.87a7 7 0 0 0 0 .37zc.02-.43.028-.656.156-.79c.137-.143.434-.21.844-.226c.571-.018 1-.46 1-1V3a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1H5V2a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2v2.243a1 1 0 0 1-1.656.736L16 13.743z"/></svg>
+                    </button>
+
+                    <button class="border-0 bg-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.5 14.012a10.6 10.6 0 0 0-5.922 1.47c-1.415.842-5.125 2.562-2.865 4.715C3.816 21.248 5.045 22 6.59 22H12m3.5-15.5a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0M18 20.714V22m0-1.286a3.36 3.36 0 0 1-2.774-1.43M18 20.713a3.36 3.36 0 0 0 2.774-1.43M18 14.285c1.157 0 2.176.568 2.774 1.43M18 14.287a3.36 3.36 0 0 0-2.774 1.43M18 14.287V13m4 1.929l-1.226.788M14 20.07l1.226-.788M14 14.93l1.226.788M22 20.07l-1.226-.788m0-3.566a3.12 3.12 0 0 1 0 3.566m-5.548-3.566a3.12 3.12 0 0 0 0 3.566" color="white"/></svg>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </header>
+
+        <!-- responsive header -->
+        <header class="navbar navbar-expand-lg responsive-header">
+            <div class="container-fluid">
+                
+                <a class="navbar-brand" href="#">
+                    <img src="../images/logo.jpg" alt="" width="120px">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse pt-3 pb-3" id="navbarSupportedContent">
+
+
+                        <ul class="navbar-nav me-auto  mb-lg-0 gap-3 mb-3 align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="projects.html">PROJECTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="calendar.html">CALENDER</a>
+                            </li>
+                    
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">UPGRADE</a>
+                            </li>
+                        </ul>
+
+            
+
+                        <ul class="navbar-nav  mb-lg-0 d-flex  gap-3 align-items-center">
+
+                        
+                            <li class="nav-item"> <a class="nav-link" href="company.html">Account</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#">LOGOUT</a> </li>
+
+                        </ul>
+
+                </div>
+            </div>
+        </header>
+
+    <!-- </header> -->
+
+    <!-- Start reports  home Page -->
+
+    <div class="company-information d-flex" id="reports">
+
+        <!-- Sidebar container-->
+        <div class="sidebar position-relative bg-dark pt-3 pb-3" style="width: 250px;">
+
+            <!-- Title section displaying "Company" -->
+            <p class="text-white mb-0 text-center shadow pb-3">Company</p>
+            
+            <!-- Unordered list containing navigation links for different company sections -->
+            <ul class="ps-0" id="company-information-ul">
+        
+                <!-- List item for styling the current section -->
+                <li class="company-information-active mb-1">
+                    <!-- Link to Company Profile section-->
+                    <a class="toggle-link text-white mb-1 ps-2" href="#companyProfile" role="button">
+                        Company Profile
+                    </a>
+                </li>
+        
+                <!-- List item for Company Settings -->
+                <li class="mb-1">
+                    <!-- Link to Company Profile section-->
+                    <a class="toggle-link text-white ps-2" href="#companySettings" role="button">
+                        Company Settings
+                    </a>
+                </li>
+        
+                <!-- List item for Company Settings -->
+                <li class="mb-1">
+                    <!-- Link to Company Profile section-->
+                    <a class="toggle-link text-white ps-2" role="button" href="#companyUsers">
+                        Company Users
+                    </a>
+                </li>
+        
+                <!-- List item for Company Settings -->
+                <li class="mb-1">
+                    <!-- Link to Company Profile section-->
+                    <a class="toggle-link text-white ps-2" role="button" href="#subscription">
+                        Subscription
+                    </a>
+                </li>
+        
+                <!-- List item for Company Settings -->
+                <li class="mb-1">
+                    <!-- Link to Company Profile section-->
+                    <a class="toggle-link text-white ps-2" role="button" href="#libraries">
+                        Libraries
+                    </a>
+                </li>
+        
+                <!-- List item for Company Settings -->
+                <li class="mb-1">
+                    <!-- Link to Company Profile section-->
+                    <a class="toggle-link text-white ps-2" role="button" href="#customerList">
+                        Customer List
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        
+    
+        <!-- main content for company -->
+        <div class="main position-relative" style="width: calc(100% - 250px);">
+
+            <section>
+
+                <!-- company profile section -->
+                <div class="toggle-content company-profile" id="companyProfile">
+
+                    <!-- profile content -->
+                    <div class="profile mb-5">
+                        <p class="d-flex align-items-center gap-3 bg-secondary-subtle p-3 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><g fill="none"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="#0384DE" d="M12 12c1.873 0 3.57.62 4.815 1.487c1.183.825 2.185 2.051 2.185 3.37c0 .724-.309 1.324-.796 1.77c-.458.421-1.056.694-1.672.88C15.301 19.88 13.68 20 12 20s-3.301-.12-4.532-.493c-.616-.186-1.214-.459-1.673-.88C5.31 18.182 5 17.582 5 16.858c0-1.319 1.002-2.545 2.185-3.37C8.43 12.62 10.127 12 12 12m7 1c1.044 0 1.992.345 2.693.833c.64.447 1.307 1.19 1.307 2.096c0 .517-.225.946-.56 1.253c-.306.281-.684.446-1.029.55c-.47.142-1.025.215-1.601.247c.122-.345.19-.72.19-1.122c0-1.535-.959-2.839-2.032-3.744A4.8 4.8 0 0 1 19 13M5 13q.537.002 1.032.113C4.96 14.018 4 15.322 4 16.857c0 .402.068.777.19 1.122c-.576-.032-1.13-.105-1.601-.247c-.345-.104-.723-.269-1.03-.55A1.68 1.68 0 0 1 1 15.93c0-.905.666-1.649 1.307-2.096A4.76 4.76 0 0 1 5 13m13.5-6a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5m-13 0a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5M12 3a4 4 0 1 1 0 8a4 4 0 0 1 0-8"/></g></svg>
+                            <span class="fw-semibold title"> Company Profile </span>
+                        </p>
+
+                        <div class="content ps-3">
+                            <div class="mb-3">
+                                <p class="fw-bold mb-0">Trade Category</p>
+                                <small>Framing, Drywall, Paint & Interior Finishes</small>
+                            </div>
+
+                            <div class="mb-4">
+                                <p class="fw-bold mb-0">Trade Specialties</p>
+                                <small>Acoustical Ceilings</small>
+                            </div>
+
+                            <button type="button" class="btn reset-btn"> Update Information </button>
+                        </div>
+
+                    </div>
+
+                    <!-- trade name content -->
+                    <div class="trade">
+                        <p class="d-flex align-items-center gap-3 bg-secondary-subtle p-3 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.58em" height="1.4em" viewBox="0 0 576 512"><path fill="#0384DE" d="M528 160v256c0 8.8-7.2 16-16 16H320c0-44.2-35.8-80-80-80h-64c-44.2 0-80 35.8-80 80H64c-8.8 0-16-7.2-16-16V160zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm208 224a64 64 0 1 0-128 0a64 64 0 1 0 128 0m104-48c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24z"/></svg>
+                            <span class="fw-semibold title"> Trade Names </span>
+                        </p>
+
+                        <div class="content ps-3 mb-4">
+                            <div class="bg-white shadow p-3 d-flex flex-column align-items-center w-25 mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 512 512"><path fill="#0384DE" d="M261.56 101.28a8 8 0 0 0-11.06 0L66.4 277.15a8 8 0 0 0-2.47 5.79L63.9 448a32 32 0 0 0 32 32H192a16 16 0 0 0 16-16V328a8 8 0 0 1 8-8h80a8 8 0 0 1 8 8v136a16 16 0 0 0 16 16h96.06a32 32 0 0 0 32-32V282.94a8 8 0 0 0-2.47-5.79Z"/><path fill="#0384DE" d="m490.91 244.15l-74.8-71.56V64a16 16 0 0 0-16-16h-48a16 16 0 0 0-16 16v32l-57.92-55.38C272.77 35.14 264.71 32 256 32c-8.68 0-16.72 3.14-22.14 8.63l-212.7 203.5c-6.22 6-7 15.87-1.34 22.37A16 16 0 0 0 43 267.56L250.5 69.28a8 8 0 0 1 11.06 0l207.52 198.28a16 16 0 0 0 22.59-.44c6.14-6.36 5.63-16.86-.76-22.97"/></svg>
+                                <p class="mt-4 mb-0">Company</p>
+                                <a data-bs-toggle="modal" data-bs-target="#addTradeName" style="color: var(--main-menu);">details</a>
+                            </div>
+
+                            <button data-bs-toggle="modal" data-bs-target="#addTradeName" type="button" class="btn reset-btn w-25">New Trade Name </button>
+
+                            <!-- model for Add New Trade name -->
+                            <div class="modal fade" id="addTradeName" tabindex="-1" aria-labelledby="addTradeNameLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="addTradeNameLabel">Company</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="" method="post">
+                                            <div class="row">
+
+                                                <div class="mb-3">
+                                                    <div class="p-4 d-flex justify-content-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="0 0 512 512"><path fill="#0384DE" d="M261.56 101.28a8 8 0 0 0-11.06 0L66.4 277.15a8 8 0 0 0-2.47 5.79L63.9 448a32 32 0 0 0 32 32H192a16 16 0 0 0 16-16V328a8 8 0 0 1 8-8h80a8 8 0 0 1 8 8v136a16 16 0 0 0 16 16h96.06a32 32 0 0 0 32-32V282.94a8 8 0 0 0-2.47-5.79Z"/><path fill="#0384DE" d="m490.91 244.15l-74.8-71.56V64a16 16 0 0 0-16-16h-48a16 16 0 0 0-16 16v32l-57.92-55.38C272.77 35.14 264.71 32 256 32c-8.68 0-16.72 3.14-22.14 8.63l-212.7 203.5c-6.22 6-7 15.87-1.34 22.37A16 16 0 0 0 43 267.56L250.5 69.28a8 8 0 0 1 11.06 0l207.52 198.28a16 16 0 0 0 22.59-.44c6.14-6.36 5.63-16.86-.76-22.97"/></svg>
+                                                    </div>
+                                                    <a href="" class="d-flex justify-content-center">Change Logo</a>
+                                                </div>
+
+                                                <p class="text-center">
+                                                    You can upload any size image, and STACK will automatically <br>
+                                                    resize it to look great on your estimates. We support .jpg, .png and .gif files. 
+                                                </p>
+
+
+                                                <div class="col-12 mb-3">
+                                                    <label class="form-label" for="first_name">Trade Name</label>
+                                                    <input class="form-control" type="text" name="trade_name" id="trade_name" placeholder="company" required>
+                                                </div>
+
+                                                <div class="col-12 mb-3">
+                                                    <label class="form-label" for="last_name">Country</label>
+                                                    <input class="form-control" type="text" name="country" id="country"  required>
+                                                </div>
+
+                                                <div class="col-12 mb-3">
+                                                    <label class="form-label" for="email">Address Line 1</label>
+                                                    <input class="form-control" type="email" name="address_line1" placeholder="Street Address" id="address_line1" required>
+                                                </div>
+
+                                                <div class="col-12 mb-3">
+                                                    <label class="form-label" for="address_line2">Address Line 2</label>
+                                                    <input class="form-control" type="text" name="address_line2" placeholder="Unit" id="address_line2" required>
+                                                </div>
+
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label" for="city">City</label>
+                                                    <input class="form-control" type="text" name="city" placeholder="City" id="city" required>
+                                                </div>
+
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label" for="postal_code">Postal Code</label>
+                                                    <input class="form-control" type="text" name="postal_code" placeholder="Postal Code" id="postal_code" required>
+                                                </div>
+
+
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label" for="email">Email</label>
+                                                    <input class="form-control" type="email" name="email" placeholder="Email" id="email" required>
+                                                </div>
+
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label" for="phone">Phone</label>
+                                                    <input class="form-control" type="text" name="phone" placeholder="(513) 555-5555" id="phone" required>
+                                                </div>
+
+                                                
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer d-flex justify-content-center gap-3">
+                                        <button type="button" class="btn reset-btn" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn submit-btn text-white" id="add-customer-button">Save</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- company setting section -->
+                <div class="toggle-content company-settings" id="companySettings" style="display: none;">
+
+                    <!-- setting content -->
+                    <div class="settings">
+                        <!-- title -->
+                        <p class="d-flex align-items-center gap-3 bg-secondary-subtle p-3 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><g fill="none"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="#0384DE" d="M12 12c1.873 0 3.57.62 4.815 1.487c1.183.825 2.185 2.051 2.185 3.37c0 .724-.309 1.324-.796 1.77c-.458.421-1.056.694-1.672.88C15.301 19.88 13.68 20 12 20s-3.301-.12-4.532-.493c-.616-.186-1.214-.459-1.673-.88C5.31 18.182 5 17.582 5 16.858c0-1.319 1.002-2.545 2.185-3.37C8.43 12.62 10.127 12 12 12m7 1c1.044 0 1.992.345 2.693.833c.64.447 1.307 1.19 1.307 2.096c0 .517-.225.946-.56 1.253c-.306.281-.684.446-1.029.55c-.47.142-1.025.215-1.601.247c.122-.345.19-.72.19-1.122c0-1.535-.959-2.839-2.032-3.744A4.8 4.8 0 0 1 19 13M5 13q.537.002 1.032.113C4.96 14.018 4 15.322 4 16.857c0 .402.068.777.19 1.122c-.576-.032-1.13-.105-1.601-.247c-.345-.104-.723-.269-1.03-.55A1.68 1.68 0 0 1 1 15.93c0-.905.666-1.649 1.307-2.096A4.76 4.76 0 0 1 5 13m13.5-6a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5m-13 0a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5M12 3a4 4 0 1 1 0 8a4 4 0 0 1 0-8"/></g></svg>
+                            <span class="fw-semibold title"> Company Settings </span>
+                        </p>
+
+
+                        <div class="content ps-3">
+
+                            <div class="pe-4"> 
+
+                                <form action="" method="post">
+
+                                    <div class="mb-3">
+                                        <label for="company_name" class="mb-1">Company Name</label>
+                                        <input type="text" class="form-control" name="name" id="company_name" placeholder="company">
+                                    </div>
+
+                                    <h2 class="mb-2">Key Unit Settings</h2>
+
+                                    <div class="mb-3">
+                                        <label class="mb-2" style="color:#777;">Key Unit For This Estimate</label> <br>
+
+                                        <div class="estimate-unit">
+                                            <div class="dropdown estimate-unit">
+
+                                                <div class="dropdown-button rounded" id="dropdownBtn">Square Foot (SQ FT)</div>
+
+                                                <div class="dropdown-content rounded" id="dropdownContent">
+                                                    <div data-value="acre">Acre (AC)</div>
+                                                    <div data-value="board-foot">Board Foot (BF)</div>
+                                                    <div data-value="ctslap">Countertop Slab (CT SLAB)</div>
+                                                    <div data-value="cubic-foot">Cubic Foot (CU FT)</div>
+                                                    <div data-value="cubic-meter">Cubic Meter (CU M)</div>
+                                                    <div data-value="cubic-yard">Cubic Yard (CU YD)</div>
+                                                    <div data-value="door">Door (DOOR)</div>
+                                                    <div data-value="each">Each (EA)</div>
+                                                    <div data-value="gallon">Gallon (GAL)</div>
+                                                    <div data-value="hour">Hour (HR)</div>
+                                                    <div data-value="linear-foot">Linear Foot (LN FT)</div>
+                                                    <div data-value="meter">Meter (M)</div>
+                                                    <div data-value="pound">Pound (LB)</div>
+                                                    <div data-value="roll">Roll (ROLL)</div>
+                                                    <div data-value="roofing-square">Roofing Square (ROOF SQ)</div>
+                                                    <div data-value="linear-foot">Linear Foot (LN FT)</div>
+                                                    <div data-value="sqft">Square Foot (SQ FT)</div>
+                                                    <div data-value="roofsq">Roofing Square (ROOF SQ)</div>
+                                                    <div data-value="sqm">Square Meter (SQ M)</div>
+                                                    <div data-value="sqyd">Square Yard (SQ YD)</div>
+                                                    <div data-value="sheet">Sheet (SHEET)</div>
+                                                    <div data-value="slab">Slab (SLAB)</div>
+                                                    <div data-value="ton">Ton (TON)</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div>
+                                        <label class="fw-semibold mb-3 mt-3 fs-5"> Target Selling Price Range</label>
+
+                                        <div class="row mb-3">
+                                            <div class="d-flex flex-column col-6">
+                                                <label style="color: #8c8c8c;">Low</label>
+                                                <input type="number" class="form-control" name="low-selling-price">
+                                            </div>
+
+                                            <p class="col-1 d-flex align-items-end">to</p>
+
+                                            <div class="d-flex flex-column col-5">
+                                                <label style="color: #8c8c8c;">High</label>
+                                                <input type="number" class="form-control" name="high-selling-price">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label  class="fw-semibold mb-3 fs-5">Target Net Profit Range</label>
+                                        <div class="row">
+                                            <div class="d-flex flex-column col-6">
+                                                <label style="color: #8c8c8c;">Low</label>
+                                                <input type="number" class="form-control" name="low-net-profit">
+                                            </div>
+
+                                            <p class="col-1 d-flex align-items-end">to</p>
+
+                                            <div class="d-flex flex-column col-5">
+                                                <label style="color: #8c8c8c;">High</label>
+                                                <input type="number" class="form-control" name="hige-net-profit">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h2 class="mb-2 mt-3">Location Settings</h2>
+
+                                    <div class="row mb-4 align-items-center">
+
+                                        <div class="mb-3 col-6">
+                                            <label class="mb-2">Default Currency</label> <br>
+
+                                            <div class="estimate-unit">
+                                                <div class="dropdown estimate-unit">
+
+                                                    <div class="dropdown-button rounded" id="dropdownBtn">USD - US Doller</div>
+
+                                                    <div class="dropdown-content rounded" id="dropdownContent">
+                                                        <div data-value="USD">USD - US Doller</div>
+                                                        <div data-value="AUD">AUD - Australian Dollar </div>
+                                                        <div data-value="GBP">GBP - Pound Sterling </div>
+                                                        <div data-value="EUR">EUR - Euro </div>
+                                                        <div data-value="CAD">CAD - Canadian Dollar </div>
+                                                        <div data-value="AED"> AED - United Arab Emirates Dirham </div>
+                                                        <div data-value="ARS"> ARS - Argentine Peso </div>
+                                                        <div data-value="BRL">BRL - Brazilian Real </div>
+                                                        <div data-value="CAD">CAD - Canadian Dollar </div>
+                                                        <div data-value="CHF"> CHF - Swiss Franc </div>
+                                                        <div data-value="CLP"> CLP - Chilean Peso </div>
+                                                        <div data-value="CNY"> CNY - Yuan Renminbi </div>
+                                                        <div data-value="COP"> COP - Colombian Peso </div>
+                                                        <div data-value="CZK"> CZK - Czech Koruna </div>
+                                                        <div data-value="DKK"> DKK - Danish Krone </div>
+                                                        <div data-value="GBP"> GBP - Pound Sterling </div>
+                                                        <div data-value="HKD"> HKD - Hong Kong Dollar </div>
+                                                        <div data-value="HUF">  HUF - Hungarian Forint  </div>
+                                                        <div data-value="JOD">  JOD - Jordanian Dinar  </div>
+                                                        <div data-value="JPY"> JPY - Yen </div>
+                                                        <div data-value="MXN"> MXN - Mexican Peso </div>
+                                                        <div data-value="NOK"> NOK - Norwegian Krone </div>
+                                                        <div data-value="NZD"> NZD - New Zealand Dollar </div>
+                                                        <div data-value="SAR"> SAR - Saudi Riyal </div>
+                                                        <div data-value="SEK"> SEK - Swedish Krona </div>
+                                                        <div data-value="SGD"> SGD - Singapore Dollar </div>
+                                                        <div data-value="USD"> USD - US Dollar </div>
+                                                        <div data-value="ZAR"> ZAR - Rand </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-6 mt-1">
+                                            <input type="checkbox" name="use_metric_measurements" id="measurements">
+                                            <label for="measurements">Use metric measurements by default</label>
+                                        </div>
+
+                                    </div>
+
+                                    <button type="submit" class="btn submit-btn text-white mb-5 d-flex justify-content-center m-auto" style="width: 120px;"> Save </button>
+
+                                </form>
+                            </div>
+                            
+
+                        </div>
+
+                    </div>
+
+                    <!-- offices content section -->
+                    <div class="offices">
+                        <p class="d-flex align-items-center gap-3 bg-secondary-subtle p-3 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M18 15h-2v2h2m0-6h-2v2h2m2 6h-8v-2h2v-2h-2v-2h2v-2h-2V9h8M10 7H8V5h2m0 6H8V9h2m0 6H8v-2h2m0 6H8v-2h2M6 7H4V5h2m0 6H4V9h2m0 6H4v-2h2m0 6H4v-2h2m6-10V3H2v18h20V7z"/></svg>
+                            <span class="fw-semibold title"> Trade Names </span>
+                        </p>
+
+                        <div class="content ps-3 mb-4">
+
+                            <div class="mb-3 d-flex align-items-center gap-2">
+                                <input type="checkbox" name="restrict_access" id="restrict_access">
+                                <label for="restrict_access mb-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M6.616 21q-.672 0-1.144-.472T5 19.385v-8.77q0-.67.472-1.143Q5.944 9 6.616 9H8V7q0-1.671 1.165-2.835Q10.329 3 12 3t2.836 1.165T16 7v2h1.385q.67 0 1.143.472q.472.472.472 1.144v8.769q0 .67-.472 1.143q-.472.472-1.143.472zm0-1h10.769q.269 0 .442-.173t.173-.442v-8.77q0-.269-.173-.442T17.385 10H6.615q-.269 0-.442.173T6 10.616v8.769q0 .269.173.442t.443.173M12 16.5q.633 0 1.066-.434q.434-.433.434-1.066t-.434-1.066T12 13.5t-1.066.434Q10.5 14.367 10.5 15t.434 1.066q.433.434 1.066.434M9 9h6V7q0-1.25-.875-2.125T12 4t-2.125.875T9 7zM6 20V10z"/></svg>
+                                    Restrict access to projects by Office
+                                </label>
+                            </div>
+
+                            <div class="me-4">
+                                <table class="table">
+
+                                    <thead class="table-secondary">
+                                        <tr>
+                                        <th>Name</th>
+                                        <th>Default Libraries</th>
+                                        <th style="width: 80px;"></th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>vvv</td>
+                                            <td>company library</td>
+                                            <td>
+                                                <a data-bs-toggle="modal" data-bs-target="#editOffice" class="me-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="green" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83l3.75 3.75z"/></svg>
+                                                </a>
+
+                                                <!-- model for Edit Office -->
+                                                <div class="modal fade" id="editOffice" tabindex="-1" aria-labelledby="editOfficeLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="editOfficeLabel">Add Office</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+
+                                                        <div class="modal-body">
+                                                            <form action="" method="post">
+                                                                <div class="row">
+                                                                    <div class="col-12 mb-3">
+                                                                        <label class="form-label" for="name">Name</label>
+                                                                        <input class="form-control" type="text" name="name" id="name" placeholder="vvv">
+                                                                    </div>
+
+                                                                    <div class="col-12 mb-3">
+                                                                        <label class="form-label" for="first-name">First Name</label>
+                                                                        <select name="" id="" class="form-select">
+                                                                            <option value="" selected>Company Library</option>
+                                                                            <option value="">Quick Start</option>
+                                                                            <option value="">Stack</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+
+                                                        <div class="modal-footer d-flex justify-content-center gap-3">
+                                                            <button type="button" class="btn reset-btn" data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn submit-btn text-white" id="add-customer-button">Save</button>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+
+                                                <a href="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.4em" viewBox="0 0 20 20"><path fill="red" d="m9.129 0l1.974.005c.778.094 1.46.46 2.022 1.078c.459.504.7 1.09.714 1.728h5.475a.69.69 0 0 1 .686.693a.69.69 0 0 1-.686.692l-1.836-.001v11.627c0 2.543-.949 4.178-3.041 4.178H5.419c-2.092 0-3.026-1.626-3.026-4.178V4.195H.686A.69.69 0 0 1 0 3.505c0-.383.307-.692.686-.692h5.47c.014-.514.205-1.035.554-1.55C7.23.495 8.042.074 9.129 0m6.977 4.195H3.764v11.627c0 1.888.52 2.794 1.655 2.794h9.018c1.139 0 1.67-.914 1.67-2.794zM6.716 6.34c.378 0 .685.31.685.692v8.05a.69.69 0 0 1-.686.692a.69.69 0 0 1-.685-.692v-8.05c0-.382.307-.692.685-.692m2.726 0c.38 0 .686.31.686.692v8.05a.69.69 0 0 1-.686.692a.69.69 0 0 1-.685-.692v-8.05c0-.382.307-.692.685-.692m2.728 0c.378 0 .685.31.685.692v8.05a.69.69 0 0 1-.685.692a.69.69 0 0 1-.686-.692v-8.05a.69.69 0 0 1 .686-.692M9.176 1.382c-.642.045-1.065.264-1.334.662c-.198.291-.297.543-.313.768l4.938-.001c-.014-.291-.129-.547-.352-.792c-.346-.38-.73-.586-1.093-.635z"/></svg>
+                                                </a>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#addOffice" class="btn submit-btn text-white d-flex m-auto mt-4 mb-4"> + Add Office </button>
+
+                            <!-- model for Add Office -->
+                            <div class="modal fade" id="addOffice" tabindex="-1" aria-labelledby="addOfficeLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="addOfficeLabel">Add Office</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="" method="post">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <label class="form-label" for="name">Name</label>
+                                                    <input class="form-control" type="text" name="name" id="name" autofocus required>
+                                                </div>
+
+                                                <div class="col-12 mb-3">
+                                                    <label class="form-label" for="first-name">First Name</label>
+                                                    <select name="" id="" class="form-select">
+                                                        <option selected> Libraries </option>
+                                                        <option value="">Company Library</option>
+                                                        <option value="">Quick Start</option>
+                                                        <option value="">Stack</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer d-flex justify-content-center gap-3">
+                                        <button type="button" class="btn reset-btn" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn submit-btn text-white" id="add-customer-button">Save</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- project settings content -->
+                    <div class="project-settings">
+                        <p class="d-flex align-items-center gap-3 bg-secondary-subtle p-3 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M17 9h2V7h-2zm0 4h2v-2h-2zm0 4h2v-2h-2zM1 21V11l7-5l7 5v10h-5v-6H6v6zm16 0V10l-7-5.05V3h13v18z"/></svg>
+                            <span class="fw-semibold title"> Project Settings </span>
+                        </p>
+
+                        <div class="content ps-3 mb-4">
+
+                            <div class="d-flex gap-2">
+                                <input type="checkbox" name="private" id="private">
+                                <div class="d-flex  gap-1 mt-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="#0384DE" d="M6.616 21q-.672 0-1.144-.472T5 19.385v-8.77q0-.67.472-1.143Q5.944 9 6.616 9H8V7q0-1.671 1.165-2.835Q10.329 3 12 3t2.836 1.165T16 7v2h1.385q.67 0 1.143.472q.472.472.472 1.144v8.769q0 .67-.472 1.143q-.472.472-1.143.472zm0-1h10.769q.269 0 .442-.173t.173-.442v-8.77q0-.269-.173-.442T17.385 10H6.615q-.269 0-.442.173T6 10.616v8.769q0 .269.173.442t.443.173M12 16.5q.633 0 1.066-.434q.434-.433.434-1.066t-.434-1.066T12 13.5t-1.066.434Q10.5 14.367 10.5 15t.434 1.066q.433.434 1.066.434M9 9h6V7q0-1.25-.875-2.125T12 4t-2.125.875T9 7zM6 20V10z"/></svg>
+                                    <p style="font-size: 15px;">Make new projects private</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                    <!-- company labels content -->
+                    <div class="company-labels">
+                        <p class="d-flex align-items-center gap-3 bg-secondary-subtle p-3 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M2.25 4.025A1.75 1.75 0 0 1 4.025 2.25l7.488.095a2.75 2.75 0 0 1 1.913.807l7.299 7.298c.423.423.798 1.034.952 1.687c.156.664.096 1.476-.529 2.1l-6.91 6.911c-.625.625-1.437.685-2.101.529a3.66 3.66 0 0 1-1.687-.952l-7.298-7.299a2.76 2.76 0 0 1-.807-1.913zm5.592 2.29a.75.75 0 0 0-1.06 1.06l.707.708a.75.75 0 0 0 1.06-1.061z"/></svg>
+                            <span class="fw-semibold title"> Company Labels </span>
+                        </p>
+
+                        <div class="content ps-3 pe-3 mb-4">
+
+
+                            <!-- if no label have show it -->
+                            <div id="no-label-content"> 
+
+                                <p class="fs-4 fw-semibold text-center">No labels found.</p>
+                                <p class="text-center"> To add a label and options, click the button below to get started. <br>
+                                    Assigning labels to your measurements will help keep your reports organized.
+                                </p>
+
+                                <button type="button" class="btn submit-btn text-white d-flex m-auto mt-4 mb-5" id="new_label"> + New Label </button>
+                            </div>
+
+                            <!-- form to add company label -->
+                            <div id="form_add_company_label" style="display: none;">
+
+                                <form action="" method="post">
+                                    <label for="" class="ms-4">Label Name</label>
+
+                                    <div class="row d-flex justify-content-evenly">
+                                        <div class="col-9">
+                                            <input type="text" id="label_name" class="form-control">
+                                        </div>
+                                    
+                                        <button type="submit" class="btn submit-btn col-1 text-white">+ Add</button>
+                                        <button type="button" id="cancle_form_label" class="btn reset-btn col-1">- Cancel</button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+
+                            
+                        </div>
+
+                    </div>
+
+                    <!-- cost type content -->
+                    <div class="cost-types">
+                        <p class="d-flex align-items-center gap-3 bg-secondary-subtle p-3 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="M8.562 15.256A21.2 21.2 0 0 0 16 16.449a21.2 21.2 0 0 0 7.438-1.194c1.864-.727 2.525-1.535 2.525-2V9.7a10.4 10.4 0 0 1-2.084 1.076A22.3 22.3 0 0 1 16 12.078a22.4 22.4 0 0 1-7.879-1.3A10.3 10.3 0 0 1 6.037 9.7v3.55c0 .474.663 1.278 2.525 2.006m0 6.705a15.6 15.6 0 0 0 2.6.741a25 25 0 0 0 4.838.453a25 25 0 0 0 4.838-.452a15.6 15.6 0 0 0 2.6-.741c1.864-.727 2.525-1.535 2.525-2v-3.39a10.7 10.7 0 0 1-1.692.825A23.5 23.5 0 0 1 16 18.74a23.5 23.5 0 0 1-8.271-1.348a11 11 0 0 1-1.692-.825v3.393c0 .466.663 1.271 2.525 2.001M16 30c5.5 0 9.963-1.744 9.963-3.894v-2.837a10.5 10.5 0 0 1-1.535.762l-.157.063A23.5 23.5 0 0 1 16 25.445a23.4 23.4 0 0 1-8.271-1.351l-.157-.063a10.5 10.5 0 0 1-1.535-.762v2.837C6.037 28.256 10.5 30 16 30"/><ellipse cx="16" cy="5.894" fill="#0384DE" rx="9.963" ry="3.894"/></svg>
+                            <span class="fw-semibold title"> Cost Types </span>
+                        </p>
+
+                        <div class="content ps-3 mb-4">
+
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Source</th>
+                                        <th scope="col">Default Markup %</th>
+                                        <th scope="col" style="width: 20px;"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td> <a href=""> Equipment </a> </td>
+                                        <td> <a href=""> Stack </a> </td>
+                                        <td>0.00</td>
+                                        <td style="cursor: pointer;"> <a data-bs-toggle="modal" data-bs-target="#editCostType"> <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="green" d="M3 17.46v3.04c0 .28.22.5.5.5h3.04c.13 0 .26-.05.35-.15L17.81 9.94l-3.75-3.75L3.15 17.1q-.15.15-.15.36M20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83l3.75 3.75z"/></svg> </a>  </td>
+                                        
+                                        <!-- model for Edit Cost Type -->
+                                        <div class="modal fade" id="editCostType" tabindex="-1" aria-labelledby="editCostTypeLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="editCostTypeLabel">Edit Cost Type</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+
+                                                <div class="modal-body">
+                                                    <form action="" method="post">
+                                                        <div class="row">
+                                                            <div class="col-12 mb-3">
+                                                                <label class="form-label" for="name">Name</label>
+                                                                <input class="form-control" type="text" name="name" id="name" placeholder="Equipment">
+                                                            </div>
+
+                                                            <div class="col-12 mb-3">
+                                                                <label class="form-label" for="markup">Default Markup %</label>
+                                                                <input class="form-control" type="number" value="0" name="markup" id="markup">
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <div class="modal-footer d-flex justify-content-center gap-3">
+                                                    <button type="button" class="btn reset-btn" data-bs-dismiss="modal">Cancel</button>
+                                                    <button type="button" class="btn submit-btn text-white" id="add-customer-button">Save</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td> <a href=""> Labor </a> </td>
+                                        <td> <a href=""> Stack </a> </td>
+                                        <td>0.00</td>
+                                        <td> <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="green" d="M3 17.46v3.04c0 .28.22.5.5.5h3.04c.13 0 .26-.05.35-.15L17.81 9.94l-3.75-3.75L3.15 17.1q-.15.15-.15.36M20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83l3.75 3.75z"/></svg> </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td> <a href=""> Material </a> </td>
+                                        <td> <a href=""> Stack </a> </td>
+                                        <td>0.00</td>
+                                        <td> <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="green" d="M3 17.46v3.04c0 .28.22.5.5.5h3.04c.13 0 .26-.05.35-.15L17.81 9.94l-3.75-3.75L3.15 17.1q-.15.15-.15.36M20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83l3.75 3.75z"/></svg> </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td> <a href=""> Subcontract </a> </td>
+                                        <td> <a href=""> Stack </a> </td>
+                                        <td>0.00</td>
+                                        <td> <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="green" d="M3 17.46v3.04c0 .28.22.5.5.5h3.04c.13 0 .26-.05.35-.15L17.81 9.94l-3.75-3.75L3.15 17.1q-.15.15-.15.36M20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83l3.75 3.75z"/></svg> </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td> <a href=""> Crew Hours </a> </td>
+                                        <td> <a href=""> Stack </a> </td>
+                                        <td>0.00</td>
+                                        <td> <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="green" d="M3 17.46v3.04c0 .28.22.5.5.5h3.04c.13 0 .26-.05.35-.15L17.81 9.94l-3.75-3.75L3.15 17.1q-.15.15-.15.36M20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83l3.75 3.75z"/></svg> </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td> <a href=""> Summary </a> </td>
+                                        <td> <a href=""> Stack </a> </td>
+                                        <td>0.00</td>
+                                        <td> <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="green" d="M3 17.46v3.04c0 .28.22.5.5.5h3.04c.13 0 .26-.05.35-.15L17.81 9.94l-3.75-3.75L3.15 17.1q-.15.15-.15.36M20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83l3.75 3.75z"/></svg> </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#addCostType" class="btn submit-btn text-white d-flex m-auto mt-4 mb-5"> + Add Cost Type </button>
+
+                            <!-- model for Add Cost Type -->
+                            <div class="modal fade" id="addCostType" tabindex="-1" aria-labelledby="addCostTypeLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="addCostTypeLabel">Add Cost Type</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="" method="post">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <label class="form-label" for="name">Name</label>
+                                                    <input class="form-control" type="text" name="name" id="name" autofocus required>
+                                                </div>
+
+                                                <div class="col-12 mb-3">
+                                                    <label class="form-label" for="markup">Default Markup %</label>
+                                                    <input class="form-control" type="number" name="markup" id="markup">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer d-flex justify-content-center gap-3">
+                                        <button type="button" class="btn reset-btn" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn submit-btn text-white" id="add-customer-button">Save</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <!-- non measured item content -->
+                    <div class="non-measured-item">
+                        <p class="d-flex align-items-center gap-3 bg-secondary-subtle p-3 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" fill-rule="evenodd" d="M5 2a1 1 0 0 0-1 1v16a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-.293-.707l-5-5A1 1 0 0 0 14 2zm9 2.414L17.586 8H14zM12 12a1 1 0 0 1 1 1v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 1 1 0-2h1v-1a1 1 0 0 1 1-1" clip-rule="evenodd"/></svg>
+                            <span class="fw-semibold title">  Non-Measured Item Sets</span>
+                        </p>
+
+                        <div class="content ps-3 mb-4">
+
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col" style="width: 80px;"></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td> <a href=""> name </a> </td>
+
+                                        <td class="d-flex gap-2">
+                                            <a href="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="green" d="M3 17.46v3.04c0 .28.22.5.5.5h3.04c.13 0 .26-.05.35-.15L17.81 9.94l-3.75-3.75L3.15 17.1q-.15.15-.15.36M20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83l3.75 3.75z"/></svg>
+                                            </a>
+
+                                            <a href="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.4em" viewBox="0 0 20 20"><path fill="red" d="m9.129 0l1.974.005c.778.094 1.46.46 2.022 1.078c.459.504.7 1.09.714 1.728h5.475a.69.69 0 0 1 .686.693a.69.69 0 0 1-.686.692l-1.836-.001v11.627c0 2.543-.949 4.178-3.041 4.178H5.419c-2.092 0-3.026-1.626-3.026-4.178V4.195H.686A.69.69 0 0 1 0 3.505c0-.383.307-.692.686-.692h5.47c.014-.514.205-1.035.554-1.55C7.23.495 8.042.074 9.129 0m6.977 4.195H3.764v11.627c0 1.888.52 2.794 1.655 2.794h9.018c1.139 0 1.67-.914 1.67-2.794zM6.716 6.34c.378 0 .685.31.685.692v8.05a.69.69 0 0 1-.686.692a.69.69 0 0 1-.685-.692v-8.05c0-.382.307-.692.685-.692m2.726 0c.38 0 .686.31.686.692v8.05a.69.69 0 0 1-.686.692a.69.69 0 0 1-.685-.692v-8.05c0-.382.307-.692.685-.692m2.728 0c.378 0 .685.31.685.692v8.05a.69.69 0 0 1-.685.692a.69.69 0 0 1-.686-.692v-8.05a.69.69 0 0 1 .686-.692M9.176 1.382c-.642.045-1.065.264-1.334.662c-.198.291-.297.543-.313.768l4.938-.001c-.014-.291-.129-.547-.352-.792c-.346-.38-.73-.586-1.093-.635z"/></svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            <button data-bs-toggle="modal" data-bs-target="#addItemSet" type="button" class="btn submit-btn text-white d-flex m-auto mt-4 mb-5"> + Add Item Set </button>
+
+                            <!-- model for Add Cost Type -->
+                            <div class="modal fade" id="addItemSet" tabindex="-1" aria-labelledby="addItemSetLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="addItemSetLabel">Add Item Set</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="" method="post" id="add_item_set_form">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <label class="form-label" for="name">Name</label>
+                                                    <input class="form-control" type="text" name="name" id="name" autofocus required>
+                                                </div>
+
+                                                <div class="col-12 mb-3" id="add_item_set_group">
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <label class="form-label" for="item_name">Item Name</label>
+                                                            <input class="form-control" type="text" name="item_name" id="item_name">
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <label class="form-label" for="account-code">Accounting Code</label>
+                                                            <input class="form-control" type="text" name="account-code" id="account-code">
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <label class="form-label" for="unit">Unit</label>
+                                                            <input class="form-control" type="text" name="unit" id="unit" required>
+                                                        </div>
+
+                                                        <div class="col-1 icon-plus d-flex align-items-center mt-4">
+                                                            <a id="add_new_item_set_group">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"/></svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer d-flex justify-content-center gap-3">
+                                        <button type="button" class="btn reset-btn" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn submit-btn text-white" id="add-customer-button">Save</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- scope work templates content -->
+                    <div class="scope-work-templates">
+                        <p class="d-flex align-items-center gap-3 bg-secondary-subtle p-3 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" fill-rule="evenodd" d="M5 2a1 1 0 0 0-1 1v16a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-.293-.707l-5-5A1 1 0 0 0 14 2zm9 2.414L17.586 8H14zM12 12a1 1 0 0 1 1 1v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 1 1 0-2h1v-1a1 1 0 0 1 1-1" clip-rule="evenodd"/></svg>
+                            <span class="fw-semibold title">Scope of Work Templates</span>
+                        </p>
+
+                        <div class="content ps-3 mb-4">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col" style="width: 80px;"></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td> <a href=""> name </a> </td>
+
+                                        <td class="d-flex gap-2">
+                                            <a href="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="green" d="M3 17.46v3.04c0 .28.22.5.5.5h3.04c.13 0 .26-.05.35-.15L17.81 9.94l-3.75-3.75L3.15 17.1q-.15.15-.15.36M20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83l3.75 3.75z"/></svg>
+                                            </a>
+
+                                            <a href="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.4em" viewBox="0 0 20 20"><path fill="red" d="m9.129 0l1.974.005c.778.094 1.46.46 2.022 1.078c.459.504.7 1.09.714 1.728h5.475a.69.69 0 0 1 .686.693a.69.69 0 0 1-.686.692l-1.836-.001v11.627c0 2.543-.949 4.178-3.041 4.178H5.419c-2.092 0-3.026-1.626-3.026-4.178V4.195H.686A.69.69 0 0 1 0 3.505c0-.383.307-.692.686-.692h5.47c.014-.514.205-1.035.554-1.55C7.23.495 8.042.074 9.129 0m6.977 4.195H3.764v11.627c0 1.888.52 2.794 1.655 2.794h9.018c1.139 0 1.67-.914 1.67-2.794zM6.716 6.34c.378 0 .685.31.685.692v8.05a.69.69 0 0 1-.686.692a.69.69 0 0 1-.685-.692v-8.05c0-.382.307-.692.685-.692m2.726 0c.38 0 .686.31.686.692v8.05a.69.69 0 0 1-.686.692a.69.69 0 0 1-.685-.692v-8.05c0-.382.307-.692.685-.692m2.728 0c.378 0 .685.31.685.692v8.05a.69.69 0 0 1-.685.692a.69.69 0 0 1-.686-.692v-8.05a.69.69 0 0 1 .686-.692M9.176 1.382c-.642.045-1.065.264-1.334.662c-.198.291-.297.543-.313.768l4.938-.001c-.014-.291-.129-.547-.352-.792c-.346-.38-.73-.586-1.093-.635z"/></svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            <div class="d-flex align-items-center gap-4 justify-content-center">
+                                <input type="text" class="form-control w-25 add-template-name" name="" placeholder="Name">
+                                <button data-bs-toggle="modal" data-bs-target="#addScopeWork" type="button" class="btn submit-btn text-white d-flex add-template" disabled> + Add Template </button>
+
+                                <!-- model for Add Cost Type -->
+                                <div class="modal fade" id="addScopeWork" tabindex="-1" aria-labelledby="addScopeWorkLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content">
+
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="addScopeWorkLabel">Add Scope of Work</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <form action="" method="post" id="add_item_set_form">
+                                                <div class="row">
+                                                    <div class="col-12 mb-3">
+                                                        <label class="form-label" for="name">Name</label>
+                                                        <input class="form-control" type="text" name="name" id="name" autofocus required>
+                                                    </div>
+
+                                                    <div class="col-12 mb-3" id="add_item_set_group">
+                                                        <label for="">Text</label><br>
+                                                        <textarea name="text" id="text" style="width: 100%; height: 300px;" required></textarea>
+                                                    </div>
+
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="modal-footer d-flex justify-content-center gap-3">
+                                            <button type="button" class="btn reset-btn" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn submit-btn text-white" id="add-customer-button">Save</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- terms conditions template content -->
+                    <div class="terms-conditions-templates">
+                        <p class="d-flex align-items-center gap-3 bg-secondary-subtle p-3 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" fill-rule="evenodd" d="M5 2a1 1 0 0 0-1 1v16a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-.293-.707l-5-5A1 1 0 0 0 14 2zm9 2.414L17.586 8H14zM12 12a1 1 0 0 1 1 1v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 1 1 0-2h1v-1a1 1 0 0 1 1-1" clip-rule="evenodd"/></svg>
+                            <span class="fw-semibold title">Terms and Conditions Templates</span>
+                        </p>
+
+                        <div class="content ps-3 mb-4">
+                            <!-- table to show date -->
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col" style="width: 80px;"></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td> <a href=""> name </a> </td>
+
+                                        <td class="d-flex gap-2">
+                                            <a href="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="green" d="M3 17.46v3.04c0 .28.22.5.5.5h3.04c.13 0 .26-.05.35-.15L17.81 9.94l-3.75-3.75L3.15 17.1q-.15.15-.15.36M20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83l3.75 3.75z"/></svg>
+                                            </a>
+
+                                            <a href="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.4em" viewBox="0 0 20 20"><path fill="red" d="m9.129 0l1.974.005c.778.094 1.46.46 2.022 1.078c.459.504.7 1.09.714 1.728h5.475a.69.69 0 0 1 .686.693a.69.69 0 0 1-.686.692l-1.836-.001v11.627c0 2.543-.949 4.178-3.041 4.178H5.419c-2.092 0-3.026-1.626-3.026-4.178V4.195H.686A.69.69 0 0 1 0 3.505c0-.383.307-.692.686-.692h5.47c.014-.514.205-1.035.554-1.55C7.23.495 8.042.074 9.129 0m6.977 4.195H3.764v11.627c0 1.888.52 2.794 1.655 2.794h9.018c1.139 0 1.67-.914 1.67-2.794zM6.716 6.34c.378 0 .685.31.685.692v8.05a.69.69 0 0 1-.686.692a.69.69 0 0 1-.685-.692v-8.05c0-.382.307-.692.685-.692m2.726 0c.38 0 .686.31.686.692v8.05a.69.69 0 0 1-.686.692a.69.69 0 0 1-.685-.692v-8.05c0-.382.307-.692.685-.692m2.728 0c.378 0 .685.31.685.692v8.05a.69.69 0 0 1-.685.692a.69.69 0 0 1-.686-.692v-8.05a.69.69 0 0 1 .686-.692M9.176 1.382c-.642.045-1.065.264-1.334.662c-.198.291-.297.543-.313.768l4.938-.001c-.014-.291-.129-.547-.352-.792c-.346-.38-.73-.586-1.093-.635z"/></svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            <div class="d-flex align-items-center gap-4 justify-content-center">
+                                <input type="text" class="form-control w-25 add-template-name1" name="" placeholder="Name">
+                                <button data-bs-toggle="modal" data-bs-target="#addScopeWork" type="button" class="btn submit-btn text-white d-flex add-template1" disabled> + Add Template </button>
+
+                                <!-- model for terms-conditions-templates -->
+                                <div class="modal fade" id="addScopeWork" tabindex="-1" aria-labelledby="addScopeWorkLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content">
+
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="addScopeWorkLabel">Add Scope of Work</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <form action="" method="post" id="add_item_set_form">
+                                                <div class="row">
+                                                    <div class="col-12 mb-3">
+                                                        <label class="form-label" for="name">Name</label>
+                                                        <input class="form-control" type="text" name="name" id="name" autofocus required>
+                                                    </div>
+
+                                                    <div class="col-12 mb-3" id="add_item_set_group">
+                                                        <label for="">Text</label><br>
+                                                        <textarea name="text" id="text" style="width: 100%; height: 300px;" required></textarea>
+                                                    </div>
+
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="modal-footer d-flex justify-content-center gap-3">
+                                            <button type="button" class="btn reset-btn" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn submit-btn text-white" id="add-customer-button">Save</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- company users section -->
+                <div class="toggle-content company-users" id="companyUsers" style="display: none;">
+
+                    <!-- manage company users content -->
+                    <div class="manage-company-users">
+                        <p class="d-flex align-items-center gap-3 bg-secondary-subtle p-3 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><g fill="none"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="#0384DE" d="M12 12c1.873 0 3.57.62 4.815 1.487c1.183.825 2.185 2.051 2.185 3.37c0 .724-.309 1.324-.796 1.77c-.458.421-1.056.694-1.672.88C15.301 19.88 13.68 20 12 20s-3.301-.12-4.532-.493c-.616-.186-1.214-.459-1.673-.88C5.31 18.182 5 17.582 5 16.858c0-1.319 1.002-2.545 2.185-3.37C8.43 12.62 10.127 12 12 12m7 1c1.044 0 1.992.345 2.693.833c.64.447 1.307 1.19 1.307 2.096c0 .517-.225.946-.56 1.253c-.306.281-.684.446-1.029.55c-.47.142-1.025.215-1.601.247c.122-.345.19-.72.19-1.122c0-1.535-.959-2.839-2.032-3.744A4.8 4.8 0 0 1 19 13M5 13q.537.002 1.032.113C4.96 14.018 4 15.322 4 16.857c0 .402.068.777.19 1.122c-.576-.032-1.13-.105-1.601-.247c-.345-.104-.723-.269-1.03-.55A1.68 1.68 0 0 1 1 15.93c0-.905.666-1.649 1.307-2.096A4.76 4.76 0 0 1 5 13m13.5-6a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5m-13 0a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5M12 3a4 4 0 1 1 0 8a4 4 0 0 1 0-8"/></g></svg>
+                            <span class="fw-semibold title">  Manage Company Users </span>
+                        </p>
+
+                        <div class="content ps-3 pe-3">
+                            
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <p class="fw-semibold">Full-Access Licenses:1</p>
+                                <button data-bs-toggle="modal" data-bs-target="#addCompanyUser"  type="button" class="btn submit-btn text-white d-flex"> + Add User </button>
+
+                                <!-- model for Add Company User -->
+                                <div class="modal fade" id="addCompanyUser" tabindex="-1" aria-labelledby="addCompanyUserLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="addCompanyUserLabel">Add User</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <form action="" method="post">
+                                                <div class="row">
+                                                    <div class="col-12 mb-3">
+                                                        <label class="form-label" for="first_name">First Name</label>
+                                                        <input class="form-control" type="text" name="first_name" id="first_name" autofocus required>
+                                                    </div>
+
+                                                    <div class="col-12 mb-3">
+                                                        <label class="form-label" for="last_name">Last Name</label>
+                                                        <input class="form-control" type="text" name="last_name" id="last_name"  required>
+                                                    </div>
+
+                                                    <div class="col-12 mb-3">
+                                                        <label class="form-label" for="email">Email</label>
+                                                        <input class="form-control" type="email" name="email" id="email" required>
+                                                    </div>
+
+                                                    <div class="col-12 mb-3">
+                                                        <label class="form-label" for="office">Office</label>
+                                                        <input class="form-control" type="text" name="office" id="office" required>
+                                                    </div>
+
+                                                    <div class="col-12 mb-3">
+                                                        <label class="form-label" for="office">Office</label>
+                                                        <select name="" id="" class="form-select">
+                                                            <option value="">Account Owner</option>
+                                                            <option value="">Estimator</option>
+                                                            <option value="" selected>Takeoff Operator</option>
+                                                            <option value="">Cost Viewer</option>
+                                                            <option value="">Viewer</option>
+                                                            <option value="">IT Admin</option>
+                                                            <option value="">Project Creator</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="col-12 mb-3">
+                                                        <label for="" class="mb-2" style="color: #777;">User Permissions</label>
+
+                                                        <div class="mb-3">
+                                                            <div class="mb-3">
+                                                                <input class="parent-input" type="checkbox" name="create_edit_project" id="create_edit_project">
+                                                                <label for="create_edit_project">Can create projects and edit project settings</label>
+                                                            </div>
+                                                            <div class="ps-4">
+                                                                <input type="checkbox" name="delete_project" id="delete_project" class="sub-input">
+                                                                <label for="delete_project">Can delete projects</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="mb-3">
+                                                            <div class="mb-3"> 
+                                                                <input class="parent-input" type="checkbox" name="create_project" id="create_project">
+                                                                <label for="create_project">Can create libraries</label>
+                                                            </div>
+                                                            <div class="ps-4">
+                                                                <input class="sub-input" type="checkbox" name="delete_project1" id="delete_project1">
+                                                                <label for="delete_project1">Can delete projects</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="mb-3">
+                                                            <input type="checkbox" name="edit_account" id="edit_account">
+                                                            <label for="edit_account">Can edit account settings</label>
+                                                        </div>
+
+                                                        <div class="mb-3">
+                                                            <input type="checkbox" name="create_edit_annotations" id="create_edit_annotations">
+                                                            <label for="create_edit_annotations">Can create and edit annotations</label>
+                                                        </div>
+  
+
+
+                                                    </div>
+
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="modal-footer d-flex justify-content-center gap-3">
+                                            <button type="button" class="btn reset-btn" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn submit-btn text-white" id="add-customer-button">Save</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- table to show data -->
+                            <table class="table table-striped table-hover" >
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Offices</th>
+                                        <th scope="col">Role</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Permissions</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td>Mohamed Fannana</td>
+                                        <td> gfannana@gmail.com </td>
+                                        <td></td>
+                                        <td> <span style="color:#777;">Account Owner</span> <span> Full </span> </td>
+                                        <td>Active</td>
+                                        <td>Can delete libraries +5</td>
+                                        <td style="width: 20px;">
+                                            <div class="dropdown">
+                                                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a data-bs-toggle="modal" data-bs-target="#editCompanyUser"  class="dropdown-item" href="#">Edit</a></li>
+                                                    <li><a class="dropdown-item" href="#">Reset Password</a></li>      
+                                                </ul>                                           
+                                            </div>
+                                        </td>
+
+                                        
+                                    </tr>
+
+                                    <!-- model for edit Company User -->
+                                    <div class="modal fade" id="editCompanyUser" tabindex="-1" aria-labelledby="editCompanyUserLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="editCompanyUserLabel">Add User</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <form action="" method="post">
+                                                    <div class="row">
+                                                        <div class="col-12 mb-3">
+                                                            <label class="form-label" for="first_name">First Name</label>
+                                                            <input class="form-control" type="text" name="first_name" id="first_name" value="Razan">
+                                                        </div>
+
+                                                        <div class="col-12 mb-3">
+                                                            <label class="form-label" for="last_name">Last Name</label>
+                                                            <input class="form-control" type="text" name="last_name" id="last_name"  value="Razan">
+                                                        </div>
+
+                                                        <div class="col-12 mb-3">
+                                                            <label class="form-label" for="email">Email</label>
+                                                            <input class="form-control" type="email" name="email" id="email" value="razan@gmail.com">
+                                                        </div>
+
+                                                        <div class="col-12 mb-3">
+                                                            <label class="form-label" for="office">Office</label>
+                                                            <input class="form-control" type="text" name="office" id="office" >
+                                                        </div>
+
+                                                        <div class="col-12 mb-3">
+                                                            <label class="form-label" for="office">Office</label>
+                                                            <select name="" id="" class="form-select">
+                                                                <option value="" selected>Account Owner</option>
+                                                                <option value="">Estimator</option>
+                                                                <option value="">Takeoff Operator</option>
+                                                                <option value="">Cost Viewer</option>
+                                                                <option value="">Viewer</option>
+                                                                <option value="">IT Admin</option>
+                                                                <option value="">Project Creator</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="col-12 mb-3">
+                                                            <label for="" class="mb-2" style="color: #777;">User Permissions</label>
+
+                                                            <div class="mb-3">
+                                                                <div class="mb-3">
+                                                                    <input type="checkbox" name="create_edit_project" id="create_edit_project" checked>
+                                                                    <label for="create_edit_project">Can create projects and edit project settings</label>
+                                                                </div>
+                                                                <div class="ps-4">
+                                                                    <input type="checkbox" name="delete_project" id="delete_project" checked>
+                                                                    <label for="delete_project">Can delete projects</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <div class="mb-3"> 
+                                                                    <input type="checkbox" name="create_project" id="create_project" checked>
+                                                                    <label for="create_project">Can create libraries</label>
+                                                                </div>
+                                                                <div class="ps-4">
+                                                                    <input type="checkbox" name="delete_project1" id="delete_project1" checked>
+                                                                    <label for="delete_project1">Can delete projects</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <input type="checkbox" name="edit_account" id="edit_account" checked>
+                                                                <label for="edit_account">Can edit account settings</label>
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <input type="checkbox" name="create_edit_annotations" id="create_edit_annotations" checked>
+                                                                <label for="create_edit_annotations">Can create and edit annotations</label>
+                                                            </div>
+    
+
+
+                                                        </div>
+
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <div class="modal-footer d-flex justify-content-center gap-3">
+                                                <button type="button" class="btn reset-btn" data-bs-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn submit-btn text-white" id="add-customer-button">Save</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                
+
+                <!-- subscriptions section -->
+                <div class="toggle-content subscriptions" id="subscription" style="display: none;">
+
+                    <div class="text-center mb-5 mt-3">
+                        <h1 class="mb-2"> TAKEOFF & ESTIMATE </h1>
+                        <p class="fs-4">
+                            You have a Free Takeoff & Estimating subscription <br>
+                            Upgrade now to get the best out of STACK!
+                        </p>
+                    </div>
+
+                    <div class="row justify-content-evenly ps-3 pe-3">
+
+                        <!--subscription card 1 -->
+                        <div class="col-md-5 mb-2 col-lg-3 text-center bg-white p-3 shadow rounded">
+
+                            <h2 class="mb-1">1-2 Users</h2>
+                            <small style="color: var(--main-menu);">For Small Estimating Teams</small>
+
+                            <h2 class="mb-1 mt-4">$2,999</h2>
+                            <small style="color: #777;">USD per year / per user</small>
+                            <br>
+                            <button type="button" class="btn submit-btn text-white mt-4 mb-2">BUY NOW</button>
+
+                        </div>
+
+                        <!--subscription card 2 -->
+                        <div class="col-md-5 mb-2 col-lg-3 text-center bg-white p-3 shadow rounded">
+
+                            <h2 class="mb-1">3-4 Users</h2>
+                            <small style="color: var(--main-menu);">For Growing Estimating Teams</small>
+
+                            <h2 class="mb-1 mt-4">$1,999</h2>
+                            <small style="color: #777;">USD per year / per user</small>
+                            <br>
+                            <button type="button" class="btn submit-btn text-white mt-4 mb-2">BUY NOW</button>
+
+                        </div>
+
+                        <!--subscription card 3 -->
+                        <div class="col-md-5 mb-2 col-lg-3 text-center bg-white p-3 shadow rounded">
+
+                            <h2 class="mb-1">5+ Users</h2>
+                            <small style="color: var(--main-menu);">For Large Estimating Teams</small>
+
+                            <h2 class="mb-1 mt-4">$1,899</h2>
+                            <small style="color: #777;">USD per year / per user</small>
+                            <br>
+                            <button type="button" class="btn submit-btn text-white mt-4 mb-2">BUY NOW</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- library section -->
+                <div class="toggle-content library" id="libraries" style="display: none;">
+                    <div class="libraries">
+                        <p class="d-flex align-items-center gap-3 bg-secondary-subtle p-3 mb-3">
+                            <span class="fw-semibold title">  Libraries </span>
+                        </p>
+
+                        <div class="content ps-3 pe-3">
+
+                            <!-- table to show data -->
+                            <table class="table table-hover table-striped">
+
+                                <thead>
+                                    <tr class="table-secondary">
+                                        <th>Library</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h5>Quick Start</h5>
+                                            <ul class="ps-4">
+                                                <li> -09 Finishes </li>
+                                                <li> -06 Wood, Plastics & Composites </li>
+                                                <li> -04 Masonry </li>
+                                                <li> -07 Roofing </li>
+                                                <li> -02 Asphalt Paving </li>
+                                                <li> -32 Landscaping </li>
+                                                <li> -03 Concrete </li>
+                                                <li> -22 Plumbing </li>
+                                                <li> -23 HVAC </li>
+                                                <li> -26 Electrical </li>
+                                            </ul>
+
+                                        </td>
+
+                                        <td>
+                                            Quick Start
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <h5>STACK</h5>
+                                            <ul class="ps-4">
+                                                <li> -03 00 00 - Concrete </li>
+                                                <li> -22 00 00 - Plumbing</li>
+                                                <li> -04 00 00 - Masonry </li>
+                                                <li> -07 21 00 - Thermal Insulation </li>
+                                                <li> -09 00 00 - Finishes </li>
+                                                <li> -06 00 00 - Wood, Plastics & Composites</li>
+                                                <li> -07 24 00 - EIFS </li>
+                                                <li> -05 00 00 - Metals </li>
+                                                <li> -07 30 00 - Roofing (Version 2) </li>
+                                                <li> -08 00 00 - Openings </li>
+                                                <li> -26 00 00 - Electrical </li>
+                                                <li> -23 00 00 - HVAC </li>
+                                                <li> -32 00 00 - Exterior Improvements </li>
+                                                <li> -07 46 00 - Siding </li>
+                                                <li> -07 27 00 - Air Barriers </li>
+                                            </ul>
+
+                                        </td>
+
+                                        <td>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- customer list section -->
+                <div class="toggle-content customer-list" id="customerList" style="display: none;">
+
+                    <div class="customer-list">
+                        <p class="d-flex align-items-center gap-3 bg-secondary-subtle p-3 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><g fill="none"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="#0384DE" d="M12 12c1.873 0 3.57.62 4.815 1.487c1.183.825 2.185 2.051 2.185 3.37c0 .724-.309 1.324-.796 1.77c-.458.421-1.056.694-1.672.88C15.301 19.88 13.68 20 12 20s-3.301-.12-4.532-.493c-.616-.186-1.214-.459-1.673-.88C5.31 18.182 5 17.582 5 16.858c0-1.319 1.002-2.545 2.185-3.37C8.43 12.62 10.127 12 12 12m7 1c1.044 0 1.992.345 2.693.833c.64.447 1.307 1.19 1.307 2.096c0 .517-.225.946-.56 1.253c-.306.281-.684.446-1.029.55c-.47.142-1.025.215-1.601.247c.122-.345.19-.72.19-1.122c0-1.535-.959-2.839-2.032-3.744A4.8 4.8 0 0 1 19 13M5 13q.537.002 1.032.113C4.96 14.018 4 15.322 4 16.857c0 .402.068.777.19 1.122c-.576-.032-1.13-.105-1.601-.247c-.345-.104-.723-.269-1.03-.55A1.68 1.68 0 0 1 1 15.93c0-.905.666-1.649 1.307-2.096A4.76 4.76 0 0 1 5 13m13.5-6a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5m-13 0a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5M12 3a4 4 0 1 1 0 8a4 4 0 0 1 0-8"/></g></svg>
+                            <span class="fw-semibold title"> Customer List </span>
+                        </p>
+
+                        <div class="content ps-3 pe-3">
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <div class="input-group w-50">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"/></svg>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+
+                                <div class="d-flex gap-3 align-items-center">
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#addNewCustomer" class="btn submit-btn text-white">
+                                        Add Customer
+                                    </button>
+
+                                    <!-- Modal for Add New Customer -->
+                                    <div class="modal fade" id="addNewCustomer" tabindex="-1" aria-labelledby="addNewCustomerLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable" >
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="addNewCustomerLabel">Add New Customer</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+
+                                            <div class="modal-body">
+
+                                                <form action="" method="post">
+                                                    <div class="row">
+                                                        <div class="col-12 mb-3">
+                                                            <label class="form-label" for="company-name">Company</label>
+                                                            <input class="form-control" type="text" name="company-name" id="company-name" required autofocus>
+                                                        </div>
+
+                                                        <div class="col-6 mb-3">
+                                                            <label class="form-label" for="first-name">First Name</label>
+                                                            <input class="form-control" type="text" name="first-name" id="first-name">
+                                                        </div>
+
+                                                        <div class="col-6 mb-3">
+                                                            <label class="form-label" for="last-name">Last Name</label>
+                                                            <input class="form-control" type="text" name="last-name" id="last-name">
+                                                        </div>
+
+                                                        <div class="col-12 mb-3">
+                                                            <label class="form-label" for="country-name">Country</label>
+                                                            <input class="form-control" type="text" name="country-name" id="country-name">
+                                                        </div>
+
+                                                        <div class="col-12 mb-3">
+                                                            <label class="form-label" for="address-line1">Address Line 1</label>
+                                                            <input class="form-control" type="text" name="address-line1" id="address-line1">
+                                                        </div>
+
+                                                        <div class="col-12 mb-3">
+                                                            <label class="form-label" for="address-line2">Address Line 2</label>
+                                                            <input class="form-control" type="text" name="address-line2" id="address-line2">
+                                                        </div>
+
+                                                        <div class="col-6 mb-3">
+                                                            <label class="form-label" for="city">City</label>
+                                                            <input class="form-control" type="text" name="city" id="city">
+                                                        </div>
+
+                                                        <div class="col-6 mb-3">
+                                                            <label class="form-label" for="postal-code">Postal Code</label>
+                                                            <input class="form-control" type="text" name="postal-code" id="postal-code">
+                                                        </div>
+
+
+                                                        <div class="col-6 mb-3">
+                                                            <label class="form-label" for="email">Email</label>
+                                                            <input class="form-control" type="email" name="email" id="email">
+                                                        </div>
+
+                                                        <div class="col-6 mb-3">
+                                                            <label class="form-label" for="phone">Phone</label>
+                                                            <input class="form-control" type="text" name="phone" id="phone">
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </form>
+
+                                                
+                                            </div>
+
+                                            <div class="modal-footer d-flex justify-content-center gap-3">
+                                                <button type="button" class="btn reset-btn" data-bs-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn submit-btn text-white" id="add-customer-button">Save & Select</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown">
+                                        <button class="dropdown-toggle border-0 bg-transparent" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M12 3c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m0 14c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m0-7c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li style="cursor: pointer;">
+                                                <a  class="dropdown-item" href=""> Download Import Templat </a>
+                                            </li>
+                                            <li style="cursor: pointer;">
+                                                <a  class="dropdown-item" href=""> Export to CSV </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- table to show data -->
+                            <table class="table mt-5" style="border: none !important;">
+                                <thead>
+                                    <tr>
+                                        <td scope="col" class="text-center" style="color: #777;">Name</td>
+                                        <td scope="col" class="text-center" style="color: #777;">ADDRESS1</td>
+                                        <td scope="col" class="text-center" style="color: #777;">ADDRESS2</td>
+                                        <td scope="col" class="text-center" style="color: #777;">CONTACT</td>
+                                        <td scope="col" class="text-center"></td>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr style="height: 20px;"></tr>
+
+                                    <tr class="table-light shadow">
+                                        <td class="text-center">LastName , FirstName <br> company </td>
+                                        <td class="text-center">Address Line 1 <br> Address Line 2</td>
+                                        <td class="text-center">City,State <br> Postal Code </td>
+                                        <td class="text-center">
+                                            <a href="">Email</a> <br>
+                                            <a href="">Phone</a>
+                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="dropdown-toggle border-0 bg-transparent" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M12 3c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m0 14c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m0-7c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li style="cursor: pointer;">
+                                                        <a  class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editCustomer"> Edit Customer </a>
+                                                    </li>
+                                                    <li style="cursor: pointer;">
+                                                        <a  class="dropdown-item" href=""> Delete Customer </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Modal for edit Customer -->
+                                            <div class="modal fade text-left" id="editCustomer" tabindex="-1" aria-labelledby="editCustomerLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable" >
+                                                <div class="modal-content">
+
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="addNewCustomerLabel">Edit Customer</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+
+                                                    <div class="modal-body">
+
+                                                        <form action="" method="post">
+                                                            <div class="row">
+                                                                <div class="col-12 mb-3">
+                                                                    <label class="form-label" for="company-name">Company</label>
+                                                                    <input class="form-control" type="text" name="company-name" id="company-name" placeholder="company">
+                                                                </div>
+
+                                                                <div class="col-6 mb-3">
+                                                                    <label class="form-label" for="first-name">First Name</label>
+                                                                    <input class="form-control" type="text" name="first-name" id="first-name" placeholder="first Name">
+                                                                </div>
+
+                                                                <div class="col-6 mb-3">
+                                                                    <label class="form-label" for="last-name">Last Name</label>
+                                                                    <input class="form-control" type="text" name="last-name" id="last-name" placeholder="Last Name">
+                                                                </div>
+
+                                                                <div class="col-12 mb-3">
+                                                                    <label class="form-label" for="country-name">Country</label>
+                                                                    <input class="form-control" type="text" name="country-name" id="country-name" placeholder="Country">
+                                                                </div>
+
+                                                                <div class="col-12 mb-3">
+                                                                    <label class="form-label" for="address-line1">Address Line 1</label>
+                                                                    <input class="form-control" type="text" name="address-line1" id="address-line1" placeholder="Address Line 1">
+                                                                </div>
+
+                                                                <div class="col-12 mb-3">
+                                                                    <label class="form-label" for="address-line2">Address Line 2</label>
+                                                                    <input class="form-control" type="text" name="address-line2" id="address-line2" placeholder="Address Line 2">
+                                                                </div>
+
+                                                                <div class="col-6 mb-3">
+                                                                    <label class="form-label" for="city">City</label>
+                                                                    <input class="form-control" type="text" name="city" id="city" placeholder="City">
+                                                                </div>
+
+                                                                <div class="col-6 mb-3">
+                                                                    <label class="form-label" for="postal-code">Postal Code</label>
+                                                                    <input class="form-control" type="text" name="postal-code" id="postal-code" placeholder="Postal Code">
+                                                                </div>
+
+
+                                                                <div class="col-6 mb-3">
+                                                                    <label class="form-label" for="email">Email</label>
+                                                                    <input class="form-control" type="email" name="email" id="email" placeholder="Email">
+                                                                </div>
+
+                                                                <div class="col-6 mb-3">
+                                                                    <label class="form-label" for="phone">Phone</label>
+                                                                    <input class="form-control" type="text" name="phone" id="phone" placeholder="Phone">
+                                                                </div>
+
+                                                            </div>
+                                                        </form>
+
+                                                        
+                                                    </div>
+
+                                                    <div class="modal-footer d-flex justify-content-center gap-3">
+                                                        <button type="button" class="btn reset-btn" data-bs-dismiss="modal">Cancel</button>
+                                                        <button type="button" class="btn submit-btn text-white" id="add-customer-button">Save</button>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr style="height: 40px;"></tr>
+
+                                    
+
+                                </tbody>
+                            </table>
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+            
+            </section>
+
+        </div>
+
+    </div>  
+
+    
+    <!-- End reports home Page -->
+
+
+    <!-- script for sidebar li to add active -->
+    <script>
+        document.getElementById('company-information-ul').addEventListener('click', function(event) {
+            // Check if the clicked element is an <a> inside an <li>
+            if (event.target.tagName === 'A') {
+            // Get the parent <li> of the clicked <a>
+            let clickedLi = event.target.parentElement;
+
+            // Remove the class from all <li> elements
+            let lis = this.querySelectorAll('li');
+            lis.forEach(function(li) {
+                li.classList.remove('company-information-active');
+            });
+
+            // Add the class to the clicked <li>
+            clickedLi.classList.add('company-information-active');
+            }
+        });
+
+
+    </script>
+
+    <!-- Script for show toggle-content when click toggle-link -->
+    <script>
+        // Wait for the document to load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all the links with the class "toggle-link"
+            var links = document.querySelectorAll('.toggle-link');
+            
+            // Loop through each link
+            links.forEach(function(link) {
+                // Add a click event listener
+                link.addEventListener('click', function(event) {
+                    // Prevent the default behavior (jumping to the anchor)
+                    event.preventDefault();
+        
+                    // Get the target ID from the href attribute (strip the #)
+                    var targetId = link.getAttribute('href').substring(1);
+        
+                    // Hide all content with class "toggle-content"
+                    var contents = document.querySelectorAll('.toggle-content');
+                    contents.forEach(function(content) {
+                        content.style.display = 'none';
+                    });
+        
+                    // Show the target content
+                    var targetContent = document.getElementById(targetId);
+                    if (targetContent) {
+                        targetContent.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+        
+
+    <!-- Script for select drop down in settings in company-settings-->
+    <script>
+        // Select all dropdown buttons and dropdown contents
+        const dropdownButtons = document.querySelectorAll('.dropdown-button');
+        const dropdownContents = document.querySelectorAll('.dropdown-content');
+    
+        // Iterate over each dropdown button
+        dropdownButtons.forEach((dropdownBtn, index) => {
+            const dropdownContent = dropdownContents[index]; // Match the dropdown content based on index
+    
+            // Toggle dropdown visibility for the corresponding button
+            dropdownBtn.addEventListener('click', function() {
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+            });
+    
+            // Handle item selection within the corresponding dropdown content
+            dropdownContent.addEventListener('click', function(e) {
+                if (e.target && e.target.nodeName === 'DIV') {
+                    dropdownBtn.textContent = e.target.textContent;
+                    dropdownContent.style.display = 'none';
+    
+                    // Mark the selected item
+                    Array.from(dropdownContent.children).forEach(child => {
+                        child.classList.remove('selected');
+                    });
+                    e.target.classList.add('selected');
+                }
+            });
+    
+            // Close the dropdown if clicked outside for each dropdown
+            window.onclick = function(event) {
+                dropdownButtons.forEach((btn, idx) => {
+                    if (!event.target.matches('.dropdown-button') && dropdownContents[idx].style.display === 'block') {
+                        dropdownContents[idx].style.display = 'none';
+                    }
+                });
+            };
+        });
+    </script>
+
+    <!-- script for company label class  for new label -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the elements
+            const newLabelButton = document.getElementById('new_label');
+            const cancelFormLabelButton = document.getElementById('cancle_form_label');
+            const noLabelContent = document.getElementById('no-label-content');
+            const formAddCompanyLabel = document.getElementById('form_add_company_label');
+    
+            // Initially hide the form section
+            formAddCompanyLabel.style.display = 'none';
+    
+            // Show form and hide no-label-content when 'New Label' is clicked
+            newLabelButton.addEventListener('click', function() {
+                noLabelContent.style.display = 'none';
+                formAddCompanyLabel.style.display = 'block';
+            });
+    
+            // Hide form and show no-label-content when 'Cancel' is clicked
+            cancelFormLabelButton.addEventListener('click', function() {
+                formAddCompanyLabel.style.display = 'none';
+                noLabelContent.style.display = 'block';
+            });
+        });
+    </script>
+    
+    <!-- script for non-measured-item modal  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the button and inputs
+            const addNewItemSetButton = document.getElementById('add_new_item_set_group');
+            const unitInput = document.querySelector('input[name="unit"]');
+            const itemNameInput = document.querySelector('input[name="item_name"]');
+    
+            // Disable the button by default
+            addNewItemSetButton.disabled = true;
+    
+            // Function to check if both inputs have data
+            function checkInputs() {
+                if (unitInput.value.trim() !== '' && itemNameInput.value.trim() !== '') {
+                    addNewItemSetButton.disabled = false; // Enable button if both inputs have data
+                } else {
+                    addNewItemSetButton.disabled = true; // Disable button if either input is empty
+                }
+            }
+    
+            // Attach event listeners to inputs to check on input changes
+            unitInput.addEventListener('input', checkInputs);
+            itemNameInput.addEventListener('input', checkInputs);
+    
+            // Add event listener for adding new item sets
+            addNewItemSetButton.addEventListener('click', function() {
+                // Get the container where new item sets will be added
+                const container = document.getElementById('add_item_set_group');
+    
+                // Create a new row div for the new item set
+                const newRow = document.createElement('div');
+                newRow.classList.add('row', 'mt-2');
+    
+                // Create the item name input
+                const itemNameCol = document.createElement('div');
+                itemNameCol.classList.add('col-4');
+                itemNameCol.innerHTML = `
+                    <label class="form-label" for="item_name">Item Name</label>
+                    <input class="form-control" type="text" name="item_name" required>
+                `;
+    
+                // Create the accounting code input
+                const accountCodeCol = document.createElement('div');
+                accountCodeCol.classList.add('col-4');
+                accountCodeCol.innerHTML = `
+                    <label class="form-label" for="account-code">Accounting Code</label>
+                    <input class="form-control" type="text" name="account-code">
+                `;
+    
+                // Create the unit input
+                const unitCol = document.createElement('div');
+                unitCol.classList.add('col-3');
+                unitCol.innerHTML = `
+                    <label class="form-label" for="unit">Unit</label>
+                    <input class="form-control" type="text" name="unit" required>
+                `;
+    
+                // Create the delete button
+                const deleteCol = document.createElement('div');
+                deleteCol.classList.add('col-1', 'd-flex', 'align-items-center', 'mt-4');
+                deleteCol.innerHTML = `
+                    <a class="delete-item-set-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#FF0000" d="M19 13H5v-2h14v2z"/></svg>
+                    </a>
+                `;
+    
+                // Append all elements to the new row
+                newRow.appendChild(itemNameCol);
+                newRow.appendChild(accountCodeCol);
+                newRow.appendChild(unitCol);
+                newRow.appendChild(deleteCol);
+    
+                // Append the new row to the container
+                container.appendChild(newRow);
+    
+                // Add event listener to the delete button
+                deleteCol.querySelector('.delete-item-set-group').addEventListener('click', function() {
+                    container.removeChild(newRow);
+                });
+            });
+        });
+    </script>
+
+    <!-- script for add template disabled in scope-work-templates and terms-conditions-templates -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the button and input
+            const addTemplateButton = document.querySelector('.add-template');
+            const addTemplateNameInput = document.querySelector('.add-template-name');
+
+            // Get the button and input
+            const addTemplateButton1 = document.querySelector('.add-template1');
+            const addTemplateNameInput1 = document.querySelector('.add-template-name1');
+    
+            // Disable the button by default
+            addTemplateButton.disabled = true;
+            addTemplateButton1.disabled = true;
+
+    
+        
+
+            function checkInput(input , button) {
+                if (input.value.trim() !== '') {
+                    button.disabled = false; // Enable button if input has data
+                } else {
+                    button.disabled = true; // Disable button if input is empty
+                }
+            }
+
+            
+    
+            // Attach event listener to the input field to check when its value changes
+            // Attach event listener to the input field to check when its value changes
+            addTemplateNameInput.addEventListener('input', function() {
+                checkInput(addTemplateNameInput, addTemplateButton);
+            });
+
+            addTemplateNameInput1.addEventListener('input', function() {
+                checkInput(addTemplateNameInput1, addTemplateButton1);
+            });
+
+        });
+    </script>
+
+    <!-- script for check input in company-users -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const parentInput = document.getElementById('create_edit_project');
+            const subInput = document.getElementById('delete_project');
+            const parentInput1 = document.getElementById('create_project');
+            const subInput1 = document.getElementById('delete_project1');
+    
+            // When the sub-input is checked, check the parent input automatically
+            subInput.addEventListener('change', function() {
+                if (subInput.checked) {
+                    parentInput.checked = true;
+                }
+            });
+    
+            // When the parent input is unchecked, uncheck the sub-input automatically
+            parentInput.addEventListener('change', function() {
+                if (!parentInput.checked) {
+                    subInput.checked = false;
+                }
+            });
+
+            // When the sub-input is checked, check the parent input automatically
+            subInput1.addEventListener('change', function() {
+                if (subInput1.checked) {
+                    parentInput1.checked = true;
+                }
+            });
+    
+            // When the parent input is unchecked, uncheck the sub-input automatically
+            parentInput1.addEventListener('change', function() {
+                if (!parentInput1.checked) {
+                    subInput1.checked = false;
+                }
+            });
+        });
+    </script>
+    
+    
+    
+    
+    
+
+    
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tinymce/tinymce-jquery@1/dist/tinymce-jquery.min.js"></script> 
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/morphext.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    
+    
+</body>
+
+</html>

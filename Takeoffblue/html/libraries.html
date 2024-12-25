@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takeoffblue</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/hover-min.css">
+    <link rel="stylesheet" href="../css/morphext.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Quill.js CSS  for notes in new item-->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+    <style>
+    
+        .sidebar {
+            height: calc(100vh - 61px);
+            width: 350px;
+            background-color: #f8f9fa;
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            position: fixed;
+            border-right: 1px solid black;
+        }
+
+        .main{
+            background-color: #f8f9fa;
+            height: calc(100vh - 61px);
+            overflow-y: auto;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- <header> -->
+
+        <!-- main header -->
+        <header class="normal-header">
+
+            <div class="navbar1 d-flex justify-content-between align-items-center">
+
+                <div class="content d-flex gap-3 align-items-center">
+                    <a class="navbar-brand" href="#">
+                        <img src="../images/logo.jpg" alt="" width="120px">
+                    </a>
+
+                    <ul class="navbar-nav me-auto  mb-lg-0 d-flex flex-row gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calendar.html">calendar</a>
+                        </li>
+                        <li class="nav-item responsive-hidden" >
+                            <a class="nav-link" href="libraries.html" >Libraries </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:#FFBE5E !important;">Upgrade</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="navbar1-icon d-flex gap-3 align-items-center">
+
+                    <button class="border-0 bg-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="white" d="M21 3v6h-2V6.41l-3.29 3.3l-1.42-1.42L17.59 5H15V3zM3 3v6h2V6.41l3.29 3.3l1.42-1.42L6.41 5H9V3zm18 18v-6h-2v2.59l-3.29-3.29l-1.41 1.41L17.59 19H15v2zM9 21v-2H6.41l3.29-3.29l-1.41-1.42L5 17.59V15H3v6z"/></svg>
+                    </button>
+
+                    <button class="border-0 bg-transparent"></button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 640 512"><path fill="white" d="M58.9 42.1c3-6.1 9.6-9.6 16.3-8.7L320 64l244.8-30.6c6.7-.8 13.3 2.7 16.3 8.7l41.7 83.4c9 17.9-.6 39.6-19.8 45.1l-163.4 46.7c-13.9 4-28.8-1.9-36.2-14.3L320 64l-83.4 139c-7.4 12.4-22.3 18.3-36.2 14.3L37.1 170.6c-19.3-5.5-28.8-27.2-19.8-45.1zM321.1 128l54.9 91.4c14.9 24.8 44.6 36.6 72.5 28.6L576 211.6v167c0 22-15 41.2-36.4 46.6l-204.1 51c-10.2 2.6-20.9 2.6-31 0l-204.1-51C79 419.7 64 400.5 64 378.5v-167L191.6 248c27.8 8 57.6-3.8 72.5-28.6l54.8-91.4z"/></svg>
+                    </button>
+
+                    <button class="border-0 bg-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><g fill="none" stroke="white" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 19v-9a6 6 0 0 1 6-6v0a6 6 0 0 1 6 6v9M6 19h12M6 19H4m14 0h2m-9 3h2"/><circle cx="12" cy="3" r="1"/></g></svg>
+                    </button>
+
+                    <button class="border-0 bg-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="white" d="M16 17v2H2v-2s0-4 7-4s7 4 7 4m-3.5-9.5A3.5 3.5 0 1 0 9 11a3.5 3.5 0 0 0 3.5-3.5m3.44 5.5A5.32 5.32 0 0 1 18 17v2h4v-2s0-3.63-6.06-4M15 4a3.4 3.4 0 0 0-1.93.59a5 5 0 0 1 0 5.82A3.4 3.4 0 0 0 15 11a3.5 3.5 0 0 0 0-7"/></svg>
+                    </button>
+
+                    <button class="border-0 bg-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="-2 -2.5 24 24"><path fill="white" d="M3.656 17.979A1 1 0 0 1 2 17.243V15a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H8.003zm.844-3.093a.54.54 0 0 0 .26-.069l2.355-1.638A1 1 0 0 1 7.686 13H12a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v5c0 .54.429.982 1 1c.41.016.707.083.844.226c.128.134.135.36.156.79c.003.063.003.177 0 .37a.5.5 0 0 0 .5.5m11.5-4.87a7 7 0 0 0 0 .37zc.02-.43.028-.656.156-.79c.137-.143.434-.21.844-.226c.571-.018 1-.46 1-1V3a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1H5V2a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2v2.243a1 1 0 0 1-1.656.736L16 13.743z"/></svg>
+                    </button>
+
+                    <button class="border-0 bg-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.5 14.012a10.6 10.6 0 0 0-5.922 1.47c-1.415.842-5.125 2.562-2.865 4.715C3.816 21.248 5.045 22 6.59 22H12m3.5-15.5a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0M18 20.714V22m0-1.286a3.36 3.36 0 0 1-2.774-1.43M18 20.713a3.36 3.36 0 0 0 2.774-1.43M18 14.285c1.157 0 2.176.568 2.774 1.43M18 14.287a3.36 3.36 0 0 0-2.774 1.43M18 14.287V13m4 1.929l-1.226.788M14 20.07l1.226-.788M14 14.93l1.226.788M22 20.07l-1.226-.788m0-3.566a3.12 3.12 0 0 1 0 3.566m-5.548-3.566a3.12 3.12 0 0 0 0 3.566" color="white"/></svg>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- responsive header -->
+        <header class="navbar navbar-expand-lg responsive-header">
+            <div class="container-fluid">
+                
+                <a class="navbar-brand" href="#">
+                    <img src="../images/logo.jpg" alt="" width="120px">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse pt-3 pb-3" id="navbarSupportedContent">
+
+
+                        <ul class="navbar-nav me-auto  mb-lg-0 gap-3 mb-3 align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="projects.html">PROJECTS</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="calendar.html">CALENDER</a>
+                            </li>
+                    
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">UPGRADE</a>
+                            </li>
+                        </ul>
+
+            
+
+                        <ul class="navbar-nav  mb-lg-0 d-flex  gap-3 align-items-center">
+
+                            <li class="nav-item"> <a class="nav-link" href="dashboard/Index.html">HOME</a> </li> 
+                            <li class="nav-item"> <a class="nav-link" href="plan_and_takeoff.html">PLANS & TAKEOFFS</a> </li> 
+                            <li class="nav-item"> <a class="nav-link" href="reports.html">REPORTS </a> </li> 
+                            <li class="nav-item"> <a class="nav-link" href="estimates.html">ESTIMATES</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="company.html">Account</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#">LOGOUT</a> </li>
+
+                        </ul>
+
+                </div>
+            </div>
+        </header>
+
+    <!-- </header> -->
+
+    <!-- Start plan and Takeoff  home Page -->
+
+    <div class="libraries d-flex">
+
+        <div class="sidebar position-relative">
+
+                <!-- the static sidebar -->
+                <h5>Library</h5>
+
+                <div class="row d-flex mb-3">
+                    <div class="col-10">
+                        <select class="form-select mb-3">
+                            <!-- give all one id as class in sidebar and in section to work -->
+                            <option value=""> + New Library</option>
+                            <option selected id="company-library">Company Library</option>
+                            <option value="" id="quick-start"> Quick Start </option>
+                            <option value="" id="stack"> STACK </option>
+                        </select>
+                    </div>
+
+                    <div class="col-2 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" fill-rule="evenodd" d="M14.208 4.83q.68.21 1.3.54l1.833-1.1a1 1 0 0 1 1.221.15l1.018 1.018a1 1 0 0 1 .15 1.221l-1.1 1.833q.33.62.54 1.3l2.073.519a1 1 0 0 1 .757.97v1.438a1 1 0 0 1-.757.97l-2.073.519q-.21.68-.54 1.3l1.1 1.833a1 1 0 0 1-.15 1.221l-1.018 1.018a1 1 0 0 1-1.221.15l-1.833-1.1q-.62.33-1.3.54l-.519 2.073a1 1 0 0 1-.97.757h-1.438a1 1 0 0 1-.97-.757l-.519-2.073a7.5 7.5 0 0 1-1.3-.54l-1.833 1.1a1 1 0 0 1-1.221-.15L4.42 18.562a1 1 0 0 1-.15-1.221l1.1-1.833a7.5 7.5 0 0 1-.54-1.3l-2.073-.519A1 1 0 0 1 2 12.72v-1.438a1 1 0 0 1 .757-.97l2.073-.519q.21-.68.54-1.3L4.27 6.66a1 1 0 0 1 .15-1.221L5.438 4.42a1 1 0 0 1 1.221-.15l1.833 1.1q.62-.33 1.3-.54l.519-2.073A1 1 0 0 1 11.28 2h1.438a1 1 0 0 1 .97.757zM12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8"/></svg>
+                    </div>
+
+                </div>
+
+                <!-- nav inside sidebar -->
+                <ul class="nav nav-tabs mb-3">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark p-2" style="cursor: pointer;" id="items-link">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark p-2" style="cursor: pointer;" id="assemblies-link">Assemblies</a>
+                    </li>
+                </ul>
+
+                <!-- search input -->
+                <input type="text" class="form-control mb-3" placeholder="Search items">
+
+
+                <!--sidebar content this is change with main content between company library & Quick start & STACK 
+                As per your choice from select in static sidebar -->
+                <div class="sidebar-content" >
+
+                    <!-- company library sidebar -->
+                    <div class="company-library parent">
+
+                        <!--item company library  -->
+                        <div class="items">
+
+                            <div class="d-flex gap-2 bg-white ps-1 justify-content-between align-items-center element">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#0384DE" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20z"/></svg>
+                                <input name="" class="mb-0 form-control border-0 bg-white input-name" value="New Folder" disabled autofocus>
+                        
+                                <button type="button" class="bg-transparent border-0 add-new-item-btn" id="add_new_item"> <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"/></svg> </button>
+
+                                <div class="dropdown">
+                                    <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><button class="dropdown-item new-folder-btn">New Folder</button></li>
+                                        <li><button class="dropdown-item rename-folder-btn" type="button">Rename Folder</button></li>
+                                        <li><button class="dropdown-item add-new-item-btn">Add New Item</button></li>
+                                        <li><a class="dropdown-item " href="#">Move Folder To</a></li>
+                                        <li><a class="dropdown-item " href="#">Delete Folder</a></li>
+                                    </ul>
+                                </div>
+                        
+                            </div>
+
+                        </div>
+
+                        <!--Assembly company library -->
+                        <div class="assemblies" style="display: none;">
+
+                            <div class="d-flex gap-2 bg-white ps-1 justify-content-between align-items-center element">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#0384DE" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20z"/></svg>
+                                <input name="" class="mb-0 form-control border-0 bg-white input-name" value="New Folder" disabled autofocus>
+                        
+                                <!-- buttn to add new assembly -->
+                                <button type="button" class="bg-transparent border-0 add-new-assembly-btn" id="add_new_item"> <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"/></svg> </button>
+
+                                <div class="dropdown">
+                                    <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><button class="dropdown-item new-folder-btn">New Folder</button></li>
+                                        <li><button class="dropdown-item rename-folder-btn" type="button">Rename Folder</button></li>
+                                        <li><button class="dropdown-item add-new-assembly-btn">Add New Assembly</button></li>
+                                        <li><a class="dropdown-item " href="#">Move Folder To</a></li>
+                                        <li><a class="dropdown-item " href="#">Delete Folder</a></li>
+                                    </ul>
+                                </div>
+                        
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Quick start sidebar -->
+                    <div class="quick-start parent" style="display: none;">
+
+                        <div class="items">
+
+                            <div class="folder-container">
+                                <!-- Folder 1 -->
+                                <div class="folder-item">
+                                    <div class="folder-header">
+                                        <span class="folder-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20z"/></svg>
+                                        </span>
+                                        <span class="folder-name">02 Asphalt Paving</span>
+                                    </div>
+
+                                    <div class="folder-content">
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                Asphalt Paving - Area
+                                            </div>
+
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            
+                                <!-- Folder 2 -->
+                                <div class="folder-item">
+                                    <div class="folder-header">
+                                        <span class="folder-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20z"/></svg>
+                                        </span>
+                                        <span class="folder-name">03 Concrete</span>
+                                    </div>
+                                    <div class="folder-content">
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                ICF
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                Concrete Flatwork - 2D
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                Concrete Footing, Beam, Curb
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                Concrete Rectangular Column/Pier
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                Concrete Round Column/Pier
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            
+                                <!-- Additional folders... -->
+                            </div>
+                            
+                        </div>
+
+                        <div class="assemblies" style="display: none;">
+
+                            <div class="folder-container">
+                                <!-- Folder 1 -->
+                                <div class="folder-item">
+
+                                    <div class="folder-header">
+                                        <span class="folder-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20z"/></svg>
+                                        </span>
+                                        <span class="folder-name">02 Asphalt Paving</span>
+                                    </div>
+
+                                    <div class="folder-content">
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                Asphalt Paving - Area
+                                            </div>
+
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            
+                                <!-- Folder 2 -->
+                                <div class="folder-item">
+
+                                    <div class="folder-header">
+                                        <span class="folder-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20z"/></svg>
+                                        </span>
+                                        <span class="folder-name">03 Concrete</span>
+                                    </div>
+
+                                    <div class="folder-content">
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+
+                                            <!-- folder inside folder2 -->
+                                            <div class="folder-item">
+                                    
+                                                <div class="folder-header">
+                                                    <span class="folder-icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20z"/></svg>
+                                                    </span>
+                                                    <span class="folder-name">ICF</span>
+                                                </div>
+            
+                                                <div class="folder-content">
+
+                                                    <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                                        <div class="text">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                            Concrete Flatwork - 2D 
+                                                        </div>
+            
+                                                        <div class="dropdown">
+                                                            <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                            </ul>
+                                                        </div>
+            
+                                                    </div>
+
+                                                    <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                                        <div class="text">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                            Concrete Footing, Beam, Curb - Linear  
+                                                        </div>
+            
+                                                        <div class="dropdown">
+                                                            <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                            </ul>
+                                                        </div>
+            
+                                                    </div>
+
+                                                    <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                                        <div class="text">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                            Concrete Rectangular Column/Pier - Count  
+                                                        </div>
+            
+                                                        <div class="dropdown">
+                                                            <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                            </ul>
+                                                        </div>
+            
+                                                    </div>
+
+                                                    <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                                        <div class="text">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                            Concrete Round Column/Pier - Count 
+                                                        </div>
+            
+                                                        <div class="dropdown">
+                                                            <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                            </ul>
+                                                        </div>
+            
+                                                    </div>
+                                                </div>
+            
+                                            </div>
+
+                                        </div>
+
+                                        <!-- item inside folder2 -->
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                Concrete Flatwork - 2D
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- item inside folder2 -->
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                Concrete Footing, Beam, Curb
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- item inside folder2 -->
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                Concrete Rectangular Column/Pier
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- item inside folder2 -->
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                Concrete Round Column/Pier
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            
+                                <!-- Additional folders... -->
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- STACK  -->
+                    <div class="stack parent" style="display: none;">
+
+                        <div class="items">
+
+                            <div class="folder-container">
+
+                                <!-- Folder 1 -->
+                                <div class="folder-item">
+
+                                    <div class="folder-header">
+                                        <span class="folder-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20z"/></svg>
+                                        </span>
+                                        <span class="folder-name">Items</span>
+                                    </div>
+
+                                    <div class="folder-content">
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                ICF
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                00 00 00 - Crews & Labor
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                00 00 00 - Earthwork Equipment
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                01 54 00 - Construction Aids
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                03 11 00 - Concrete Forming & Shoring
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                03 15 00 - Concrete Accessories
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                03 22 00 - Welded Wire Fabric Reinforcing
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                03 33 00 - Architectural Concrete
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                04 05 19 - Masonry Anchorage & Reinforcing
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                04 05 13 - Mortar & Grout
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                04 21 13 - Clay Unit Masonry
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                04 73 00 - Manufactured Stone Masonry
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                04 21 13 - Clay Unit Masonry
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            
+                        </div>
+
+                        <div class="assemblies" style="display: none;">
+
+                            <div class="folder-container">
+                                
+                                <!-- Folder 1 -->
+                                <div class="folder-item">
+
+                                    <div class="folder-header">
+                                        <span class="folder-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="#0384DE" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20z"/></svg>
+                                        </span>
+                                        <span class="folder-name">Assemblies</span>
+                                    </div>
+
+                                    <div class="folder-content">
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                ICF
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                00 00 00 - Crews & Labor
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                00 00 00 - Earthwork Equipment
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-item ps-4 d-flex justify-content-between align-items-center">
+                                            <div class="text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg>
+                                                01 54 00 - Construction Aids
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn  dropdown-toggle add-new-item" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 16 16"><g fill="none" stroke="#0384DE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" target="_blank"> Open Item in New Tab </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            
+                                <!-- Additional folders... -->
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+        </div>
+    
+
+        <!--also the main section his is change between company library & Quick start & STACK 
+                As per your choice from select in static sidebar-->
+        <div class="main position-relative" style="flex: auto;">
+
+            <section class="main-content">
+
+                <!-- company-library-content -->
+                <div class="company-library parent">
+
+                    <!-- items content -->
+                    <div class="items company-library-part">
+
+                        <!-- basic content -->
+                        <div class="introduction">
+                            <div class="bg-white shadow-sm w-100 p-2 pt-3 pb-3">
+                                <h4> Company Library<a href="#" class="ms-2 text-muted"><i class="bi bi-link-45deg"></i></a></h4>
+                            </div>
+                            <p class="text-center fw-semibold fs-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg> <br>
+                                Please select an item from the left panel to view
+                            </p>
+                        </div>
+
+                        <!-- add new item form -->
+                        <div class="new-item-content" style="display: none;">
+
+                            <form action="" method="post">
+                                <!-- item name -->
+                                <div class="bg-white p-3">
+                                    <input type="text" class="border-0 fs-4" value="New Item" autofocus>
+                                </div>
+                                
+                                <div class="p-3 pb-0">
+                                    <!-- Item Details -->
+                                    <div class="bg-white rounded shadow-sm p-3">
+
+                                        <p class="fw-semibold">Item Details</p>
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-7 mb-2">
+                                                <label for="item_number">Item Number</label>
+                                                <input type="text" class="form-control" name="item_number" id="item_number">
+                                            </div>
+
+                                            <div class="col-md-6 mb-2">
+                                                <label for="measured_coverage">Measured Coverage</label>
+                                                <div class="d-flex gap-2">
+                                                    <input type="number" class="form-control">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="sq ft" selected>sq ft</option>
+                                                        <option value="lin ft">lin ft</option>
+                                                        <option value="cu yd">cu yd</option>
+                                                        <option value="m">m</option>
+                                                        <option value="sq m">sq m</option>
+                                                        <option value="cu m">cu m</option>
+                                                        <option value="each">each</option>
+                                                    </select>
+
+                                                    <p>=</p>
+                                                </div>
+                                                
+                                            </div>
+
+                                            
+
+                                            <div class="col-md-6 mb-2">
+                                                <label for="purchase_coverage">Purchase Coverage</label>
+                                                <div class="d-flex gap-2">
+
+                                                    <input type="number" class="form-control">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="sq ft" selected>Bags</option>
+                                                        <option value="lin ft">Block</option>
+                                                        <option value="cu yd">Boards</option>
+                                                        <option value="m">Boxes</option>
+                                                        <option value="sq m">Coils</option>
+                                                        <option value="cu m">CY</option>
+                                                        <option value="each">Ea</option>
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label for="item_description">Item Description</label>
+                                                <textarea name="item_description" id="item_description" class="form-control" style="height: 100px;"></textarea>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- notes -->
+                                    <div class="notes-container bg-white rounded shadow-sm p-3">
+                                        <div class="notes-header">Notes</div>
+                                        <div id="toolbar">
+                                            <select class="ql-size">
+                                                <option value="small"></option>
+                                                <option selected></option>
+                                                <option value="large"></option>
+                                                <option value="huge"></option>
+                                            </select>
+                                            <button class="ql-bold"></button>
+                                            <button class="ql-italic"></button>
+                                            <button class="ql-underline"></button>
+                                            <button class="ql-strike"></button>
+                                            <button class="ql-blockquote"></button>
+                                            <button class="ql-list" value="ordered"></button>
+                                            <button class="ql-list" value="bullet"></button>
+                                            <button class="ql-link"></button>
+                                        </div>
+                                        <div id="editor" class="notes-editor">
+                                            <div class="notes-placeholder">
+                                                <p>Add more details to your item</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- cost type -->
+                                    <div class="cost-types-container bg-white rounded shadow-sm p-3">
+                                        <h3>Cost Types</h3>
+                                        <p>Cost Type <span style="color: red;">Required</span></p>
+                                    
+                                        <div class="cost-type-row">
+                                            <input type="checkbox" class="cost-checkbox" id="equipment-checkbox">
+                                            <label for="equipment-checkbox"><span>Equipment</span></label>
+                                            <input type="text" class="accounting-code" placeholder="Accounting Code" disabled>
+                                            <input type="text" class="unit-cost" placeholder="$0.00" disabled>
+                                        </div>
+                                    
+                                        <div class="cost-type-row">
+                                            <input type="checkbox" class="cost-checkbox" id="labor-checkbox">
+                                            <label for="labor-checkbox"><span>Labor</span></label>
+                                            <input type="text" class="accounting-code" placeholder="Accounting Code" disabled>
+                                            <input type="text" class="unit-cost" placeholder="$0.00" disabled>
+                                        </div>
+                                    
+                                        <div class="cost-type-row">
+                                            <input type="checkbox" class="cost-checkbox" id="material-checkbox">
+                                            <label for="material-checkbox"><span>Material</span></label>
+                                            <input type="text" class="accounting-code" placeholder="Accounting Code" disabled>
+                                            <input type="text" class="unit-cost" placeholder="$0.00" disabled>
+                                        </div>
+                                    
+                                        <div class="cost-type-row">
+                                            <input type="checkbox" class="cost-checkbox" id="subcontract-checkbox">
+                                            <label for="subcontract-checkbox"><span>Subcontract</span></label>
+                                            <input type="text" class="accounting-code" placeholder="Accounting Code" disabled>
+                                            <input type="text" class="unit-cost" placeholder="$0.00" disabled>
+                                        </div>
+                                    </div>
+
+                                    <!-- button form -->
+                                    <div class="bg-white rounded shadow-sm p-3 d-flex gap-5 justify-content-end" style="position: sticky; bottom: 0;">
+                                        <button type="button" class="btn reset-btn cancel-item-form">Cancel</button>
+                                        <button type="submit" class="btn submit-btn text-white">Save</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                            
+                        </div>
+
+                    </div>
+
+                    <!-- assemblies content -->
+                    <div class="assemblies company-library-part" style="display: none;">
+
+                        <!-- basic content -->
+                        <div class="introduction">
+                            <div class="bg-white shadow-sm w-100 p-2 pt-3 pb-3">
+                                <h4> Company Library<a href="#" class="ms-2 text-muted"><i class="bi bi-link-45deg"></i></a></h4>
+                            </div>
+                            <p class="text-center fw-semibold fs-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg> <br>
+                                Please select an assembly from the left panel to view
+                            </p>
+                        </div>
+
+                        <!-- add new assemblies form -->
+                        <div class="new-assembly-content" style="display: none;">
+
+                            <form action="" method="post">
+
+                                <!-- assembly name -->
+                                <div class="bg-white p-3">
+                                    <input type="text" class="border-0 fs-4" value="New Assembly" autofocus>
+                                </div>
+                                
+                                <div class="p-3 pb-0">
+
+                                    <!-- assembly Details -->
+                                    <div class="bg-white rounded shadow-sm p-3">
+
+                                        <p class="fw-semibold">Assembly Details</p>
+
+                                        <div class="row">
+
+                                            <div class="col-6 mb-2">
+                                                <label for="assembly_number">Assembly Number</label>
+                                                <input type="text" class="form-control" name="assembly_number" id="assembly_number">
+                                            </div>
+
+                                            <div class="col-md-6 mb-2">
+                                                <label for="unit_measure">Unit of Measure</label>
+                                                <select name="" id="" class="form-select">
+                                                    <option selected></option>
+                                                    <option value="sq ft" >sq ft</option>
+                                                    <option value="lin ft">lin ft</option>
+                                                    <option value="cu yd">cu yd</option>
+                                                    <option value="m">m</option>
+                                                    <option value="sq m">sq m</option>
+                                                    <option value="cu m">cu m</option>
+                                                    <option value="each">each</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label for="assembly_description">Assembly Description</label>
+                                                <textarea name="assembly_description" id="assembly_description" class="form-control" style="height: 100px;"></textarea>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- button form -->
+                                    <div class="bg-white rounded shadow-sm p-3 d-flex gap-5 justify-content-end" style="position: sticky; bottom: 0;">
+                                        <button type="button" class="btn reset-btn cancel-assembly-form">Cancel</button>
+                                        <button type="submit" class="btn submit-btn text-white">Save</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- quick start content -->
+                <div class="quick-start parent" style="display: none;">
+
+                    <div class="items">
+                        <div class="introduction bg-white shadow-sm w-100 p-2 pt-3 pb-3">
+                            <h4> Quick Start <a href="#" class="ms-2 text-muted"><i class="bi bi-link-45deg"></i></a></h4>
+                            <p class="text-center fw-semibold fs-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg> <br>
+                                Please select an item from the left panel to view
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="assemblies" style="display: none;">
+                        <div class="introduction bg-white shadow-sm w-100 p-2 pt-3 pb-3">
+                            <h4> Quick Start <a href="#" class="ms-2 text-muted"><i class="bi bi-link-45deg"></i></a></h4>
+                            <p class="text-center fw-semibold fs-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg> <br>
+                                Please select an assembly from the left panel to view
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- stack content -->
+                <div class="stack parent" style="display: none;">
+
+                    <div class="items">
+                        <div class="introduction bg-white shadow-sm w-100 p-2 pt-3 pb-3">
+                            <h4> STACK <a href="#" class="ms-2 text-muted"><i class="bi bi-link-45deg"></i></a></h4>
+                                <p class="text-center fs-4 fw-semibold">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg> <br>
+                                    Please select an item from the left panel to view
+                                </p>
+                        </div>
+                    </div>
+
+                    <div class="assemblies" style="display: none;">
+                        <div class="introduction bg-white shadow-sm w-100 p-2 pt-3 pb-3">
+                            <h4> STACK <a href="#" class="ms-2 text-muted"><i class="bi bi-link-45deg"></i></a></h4>
+                            <p class="text-center fs-4 fw-semibold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 32 32"><path fill="#0384DE" d="m16 4l-.375.156l-6 2.407l-.625.25v6.718l-5.406 2.344l-.594.281v8.063l.5.312l6 3.344l.469.25l.469-.219L16 25.125l5.563 2.781l.468.219l.469-.25l6-3.344l.5-.312v-8.063l-.594-.281L23 13.531V6.812l-.625-.25l-6-2.406zm0 2.188l3.281 1.28L16 8.75l-3.281-1.281zm-5 2.75l4 1.53v4.876l-4-1.781zm10 0v4.624l-4 1.782v-4.875zm-11 6.374l3.625 1.594L10 18.688l-3.625-1.813zm12 0l3.625 1.563L22 18.688l-3.625-1.782l1.125-.5zM5 18.407l4 2v4.907l-4-2.25zm22 0v4.657l-4 2.25v-4.907zm-12 .063v4.906l-4 2v-4.969zm2 0l4 1.937v4.969l-4-2z"/></svg> <br>
+                                Please select an assembly from the left panel to view
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </section>
+
+        </div>
+
+    </div>    
+
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tinymce/tinymce-jquery@1/dist/tinymce-jquery.min.js"></script> 
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/morphext.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- script to show items and assemblies -->
+    <script>
+        const itemsLink = document.getElementById('items-link');
+        const assembliesLink = document.getElementById('assemblies-link');
+        const itemsContent = document.querySelectorAll('.items');
+        const assembliesContent = document.querySelectorAll('.assemblies');
+
+        itemsLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            setActiveTab(itemsLink, itemsContent, assembliesContent);
+        });
+
+        assembliesLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            setActiveTab(assembliesLink, assembliesContent, itemsContent);
+        });
+
+        function setActiveTab(activeLink, showElements, hideElements) {
+            // Remove 'active' class from both links
+            itemsLink.classList.remove('active');
+            assembliesLink.classList.remove('active');
+
+            // Add 'active' class to the clicked link
+            activeLink.classList.add('active');
+
+            // Hide all elements in the hideElements NodeList
+            hideElements.forEach(element => {
+                element.style.display = 'none';
+            });
+
+            // Show all elements in the showElements NodeList
+            showElements.forEach(element => {
+                element.style.display = 'block';
+            });
+        }
+
+    </script>
+
+    <!-- script for selected optin show the correct content -->
+    <script>
+        const selectElement = document.querySelector('select'); // Adjust if the <select> has an ID or another selector
+        const mainContent = document.querySelector('.main-content');
+        const sidebarContent = document.querySelector('.sidebar-content');
+
+        selectElement.addEventListener('change', () => {
+            // Get the ID of the selected option
+            const selectedId = selectElement.options[selectElement.selectedIndex].id;
+
+            // Show all elements with the class matching the selected ID
+            document.querySelectorAll(`.${selectedId}`).forEach(element => {
+                element.style.display = 'block';
+            });
+
+            // Hide all other elements inside main-content and sidebar-content
+            mainContent.querySelectorAll('.parent').forEach(element => {
+                if (!element.classList.contains(selectedId)) {
+                    element.style.display = 'none';
+                }
+            });
+
+            sidebarContent.querySelectorAll('.parent').forEach(element => {
+                if (!element.classList.contains(selectedId)) {
+                    element.style.display = 'none';
+                }
+            });
+        });
+
+    </script>
+
+    <!-- script for rename folder in sidebar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Select the button and input elements
+            const renameButton = document.querySelector('.rename-folder-btn');
+            const inputField = document.querySelector('.input-name');
+
+            // Add event listener for the button click
+            renameButton.addEventListener('click', function () {
+                inputField.disabled = false; // Enable the input
+                inputField.classList.add('border'); // Add border class
+                inputField.focus(); // Focus on the input field
+            });
+
+            // Add event listener for when the input field loses focus
+            inputField.addEventListener('blur', function () {
+                inputField.disabled = true; // Disable the input
+                inputField.classList.remove('border'); // Remove border class
+            });
+        });
+    </script>
+
+    <!-- script for add new item & assembly in items & assemblies sidebar to show add item form & add assembly form in main section -->
+    <script>
+        // Select all buttons with the class 'add-new-item-btn'
+        const addNewItemButtons = document.querySelectorAll('.add-new-item-btn');
+        const addNewAssemblyButtons = document.querySelectorAll('.add-new-assembly-btn');
+
+    
+        // Loop through each button and add a click event listener
+        addNewItemButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Select all elements with the class 'items'
+                const items = document.querySelectorAll('.company-library-part');
+    
+                // Loop through each 'items' element
+                items.forEach(item => {
+                    // Find the 'introduction' and 'new-item-content' elements within each 'items' element
+                    const introduction = item.querySelector('.introduction');
+                    const newItemContent = item.querySelector('.new-item-content');
+                    
+    
+                    // Hide 'introduction' and show 'new-item-content'
+                    if (introduction) introduction.style.display = 'none';
+                    if (newItemContent) newItemContent.style.display = 'block';
+                });
+            });
+        });
+
+
+         // Loop through each button and add a click event listener for assembly
+        addNewAssemblyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Select all elements with the class 'ass'
+                const assemblies = document.querySelectorAll('.assemblies');
+    
+                // Loop through each 'assemblies' element
+                assemblies.forEach(assembly => {
+                    // Find the 'introduction' and 'new-assembly-content' elements within each 'items' element
+                    const introduction = assembly.querySelector('.introduction');
+                    const newAssemblyContent = assembly.querySelector('.new-assembly-content');
+                    
+    
+                    // Hide 'introduction' and show 'new-assembly-content'
+                    if (introduction) introduction.style.display = 'none';
+                    if (newAssemblyContent) newAssemblyContent.style.display = 'block';
+                });
+            });
+        });
+    
+        // Select all buttons with the class 'cancel-item-form'
+        const cancelItemButtons = document.querySelectorAll('.cancel-item-form');
+        const cancelAssemblyButtons = document.querySelectorAll('.cancel-assembly-form');
+
+    
+        // Loop through each button and add a click event listener
+        cancelItemButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Select all elements with the class 'items'
+                const items = document.querySelectorAll('.items');
+    
+                // Loop through each 'items' element
+                items.forEach(item => {
+                    // Find the 'introduction' and 'new-item-content' elements within each 'items' element
+                    const introduction = item.querySelector('.introduction');
+                    const newItemContent = item.querySelector('.new-item-content');
+    
+                    // Show 'introduction' and hide 'new-item-content'
+                    if (introduction) introduction.style.display = 'block';
+                    if (newItemContent) newItemContent.style.display = 'none';
+                });
+
+            });
+        });
+
+        // Loop through each button and add a click event listener for assembly
+        cancelAssemblyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+    
+                // Select all elements with the class 'assemblies'
+                const assemblies = document.querySelectorAll('.assemblies');
+    
+                // Loop through each 'assemblies' element
+                assemblies.forEach(assembly => {
+                    // Find the 'introduction' and 'new-assembly-content' elements within each 'items' element
+                    const introduction = assembly.querySelector('.introduction');
+                    const newAssemblyContent = assembly.querySelector('.new-assembly-content');
+    
+                    // Show 'introduction' and hide 'new-assembly-content'
+                    if (introduction) introduction.style.display = 'block';
+                    if (newAssemblyContent) newAssemblyContent.style.display = 'none';
+                });
+            });
+        });
+    </script>
+    
+
+    <!-- script for notes when create new item  -->
+    <!-- Quill.js JavaScript -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script>
+        // Initialize Quill editor
+        const editor = new Quill('#editor', {
+            placeholder: 'Add more details to your item...',
+            theme: 'snow',
+            modules: {
+                toolbar: '#toolbar'
+            }
+        });
+    </script>
+
+    <!-- script for cost type when create new item -->
+    <script>
+        // Select all checkboxes with the class 'cost-checkbox'
+        const checkboxes = document.querySelectorAll('.cost-checkbox');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', (event) => {
+                // Find the sibling input fields (accounting code and unit cost) for this checkbox
+                const row = event.target.closest('.cost-type-row');
+                const accountingCodeInput = row.querySelector('.accounting-code');
+                const unitCostInput = row.querySelector('.unit-cost');
+
+                // Enable or disable the inputs based on the checkbox state
+                if (event.target.checked) {
+                    accountingCodeInput.disabled = false;
+                    unitCostInput.disabled = false;
+                } else {
+                    accountingCodeInput.disabled = true;
+                    unitCostInput.disabled = true;
+                }
+            });
+        });
+    </script>
+
+    <!-- script for Toggling Folders in sidebar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select all folder headers
+            const folderHeaders = document.querySelectorAll('.folder-header');
+            
+            folderHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    // Get the corresponding folder content
+                    const folderContent = header.nextElementSibling;
+                    
+                    // Toggle the display of folder content
+                    if (folderContent.style.display === 'none' || folderContent.style.display === '') {
+                        folderContent.style.display = 'block';
+                    } else {
+                        folderContent.style.display = 'none';
+                    }
+                    
+                    // Toggle the arrow icon
+                    const toggleButton = header.querySelector('.toggle-button');
+                });
+            });
+        });
+    </script>
+    
+
+
+
+</body>
+</html>
+    

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takeoffblue</title>
+    <link rel="stylesheet" href="../../css/all.css">
+    <link rel="stylesheet" href="../../css/animate.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/hover-min.css">
+    <link rel="stylesheet" href="../../css/morphext.css">
+</head>
+<body>
+
+    <div class="row justify-content-center background_sign mt-4 mb-4" id="signIn-email">
+        <div class="auth_card bounceInDown col-12 col-sm-8 col-md-6 col-lg-4 mt-5">
+            <div class="top_sec d-flex justify-content-center align-items-center flex-column">
+                <img src="../../images/logo.jpg" alt="">
+                <h3>Welcome! <span id="js-rotating">Takeoffblue, So Simple, Such Cool</span></h3>
+                <p>Sign in to <span class="Takeoffblue">Takeoffblue</span></p>
+            </div>
+            
+            <form id="emailForm" action="" method="post">
+                <div class="input_group">
+                    <label class="input_label" for="emailInput">Business Email*</label>
+                    <input type="email" class="login_input" name="email" id="emailInput" required>
+                </div>
+                <button type="button" class="login_button rounded" id="continue-signin">Continue</button>
+            </form>
+    
+            <a href="" class="create_link">Create a Free Account</a>
+    
+            <div class="or"></div>
+            <div class="social">
+                <button type="button" class="hvr-shadow-radial"><img src="../../images/google.svg" alt=""> Login With Google</button>
+                <button type="button" class="hvr-shadow-radial"><img src="../../images/microsoft.png" alt=""> Login With Microsoft</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row justify-content-center background_sign mt-4 mb-4" id="signIn-password" style="display: none;">
+        <div class="auth_card  bounceInDown col-12 col-sm-8 col-md-6 col-lg-4 mt-5">
+
+            <div class="top_sec d-flex justify-content-center align-items-center flex-column">
+                <img src="../../images/logo.jpg" alt="">
+                <h3>Enter Your Password</h3>
+                <p>Sign in to <span class="Takeoffblue">Takeoffblue</span></p>
+            </div>
+    
+            <form id="passwordForm" action="" method="post">
+                <div class="inputs w-100">
+                    <div class="input-group mb-4">
+                        <label class="input_label" for="emailDisplay" style="top: 0; font-size: 14px; color:var(--secondary-menu);">Business Email*</label>
+                        <input type="email" class="login_input" id="emailDisplay" name="email">
+                    </div>
+                    <div class="input_group">
+                        <label class="input_label" for="passwordInput">Password*</label>
+                        <input type="password" class="login_input" id="passwordInput" name="password" required>
+                    </div>
+                </div>
+    
+                <div class="pass_link text-left w-100">
+                    <a href="" class="create_link">Forgot your password?</a>
+                </div>
+    
+                <button class="login_button rounded" type="submit">Login</button>
+            </form>
+    
+            <a href="" class="create_link">Create a FREE Account</a>
+        </div>
+    </div>
+    
+
+    <!-- Start script from email and password sigin  -->
+    <script>
+        document.getElementById('continue-signin').addEventListener('click', function() {
+            var emailInput = document.getElementById('emailInput');
+            var email = emailInput.value.trim();
+
+            // Basic email validation
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailPattern.test(email)) {
+                document.getElementById('signIn-email').style.display = 'none';
+                document.getElementById('signIn-password').style.display = 'flex';
+                document.getElementById('emailDisplay').value = email;
+            }
+        });
+    </script>
+    <!-- End script from email and password sigin  -->
+
+
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/wow.min.js"></script>
+    <script src="../../js/morphext.min.js"></script>
+</body>
+</html>
